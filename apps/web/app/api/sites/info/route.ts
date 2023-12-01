@@ -9,7 +9,7 @@ export const GET = withAuth(async ({ headers, searchParams }) => {
   const response = await prisma.site.findUnique({
     where: {
       domain_key: {
-        domain: domain || "rivvi.app",
+        domain: domain || "ruhe.app",
         key,
       },
     },

@@ -62,7 +62,7 @@ export function constructMetadata({
 }
 
 export const generatePreviewUrl = (slug: string): string => {
-  return `${slug}.rivvi.app`;
+  return `${slug}.ruhe.app`;
 };
 
 export const nanoid = customAlphabet(
@@ -141,7 +141,7 @@ export const chunk = <T>(array: T[], chunk_size: number): T[][] => {
 };
 
 export function linkConstructor({
-  domain = "rivvi.app",
+  domain = "ruhe.app",
   key,
   localhost,
   pretty,

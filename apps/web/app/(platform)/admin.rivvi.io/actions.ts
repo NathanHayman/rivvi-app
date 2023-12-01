@@ -124,7 +124,7 @@ export async function getUserByKey(data: FormData) {
     where: {
       sites: {
         some: {
-          domain: "rivvi.app",
+          domain: "ruhe.app",
           key,
         },
       },
@@ -133,7 +133,7 @@ export async function getUserByKey(data: FormData) {
       email: true,
       sites: {
         where: {
-          domain: "rivvi.app",
+          domain: "ruhe.app",
           key,
         },
         select: {

@@ -101,7 +101,7 @@ export async function getRandomKey(domain: string): Promise<string> {
 
 export async function checkIfKeyExists(domain: string, key: string) {
   if (
-    domain === "rivvi.app" &&
+    domain === "ruhe.app" &&
     ((await isReservedKey(key)) || key === "studio" || key === "login")
   ) {
     return true; // reserved keys for ruhe.app
@@ -158,7 +158,7 @@ export async function processSite({
     }
     // if it's not a custom workspace, do some filtering
   } else {
-    if (domain !== "rivvi.app") {
+    if (domain !== "ruhe.app") {
       return {
         site: payload,
         error: "Invalid domain",
@@ -243,7 +243,7 @@ export async function addSite(site: SiteProps) {
 }
 
 export async function editSite({
-  domain: oldDomain = "rivvi.app",
+  domain: oldDomain = "ruhe.app",
   key: oldKey,
   updatedSite,
 }: {
@@ -335,7 +335,7 @@ export async function editSite({
 }
 
 export async function deleteSite({
-  domain = "rivvi.app",
+  domain = "ruhe.app",
   key,
 }: {
   domain?: string;

@@ -44,7 +44,7 @@ export default function Interim() {
 				<br className="hidden sm:block" />
 				Don't have one? Use the default{" "}
 				<p className="text-muted-foreground hover:text-foreground underline transition-colors">
-					rivvi.app
+					ruhe.app
 				</p>{" "}
 				domain to create a site.
 			</motion.p>
