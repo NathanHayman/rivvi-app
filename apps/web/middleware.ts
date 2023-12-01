@@ -26,12 +26,12 @@ export const config = {
 export default async function middleware(req: NextRequest, ev: NextFetchEvent) {
   // console the ip address of the request
   const { domain, path, key, fullPath } = parse(req);
-  const ip = ipAddress(req) || LOCALHOST_IP;
+  // const ip = ipAddress(req) || LOCALHOST_IP;
 
-  // if the ip in not LOCALHOST_IP, then dont allow the user to access the site
-  if (ip !== LOCALHOST_IP) {
-    return NextResponse.redirect(new URL(`https://rivvi.io/404`, req.url));
-  }
+  // // if the ip in not LOCALHOST_IP, then dont allow the user to access the site
+  // if (ip !== LOCALHOST_IP) {
+  //   return NextResponse.redirect(new URL(`https://rivvi.io/404`, req.url));
+  // }
 
   // for Home
   if (isHomeHostname(domain)) {
