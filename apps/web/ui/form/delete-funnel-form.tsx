@@ -75,7 +75,7 @@ function FormButton() {
 			)}
 			disabled={pending}
 		>
-			{pending ? <LoadingDots /> : <p>Delete Funnel</p>}
+			{pending ? <LoadingDots /> : <p>Delete Site</p>}
 		</button>
 	);
 }

@@ -14,7 +14,7 @@ import { Header } from "@/ui/layout/dashboard/header";
 import { Main } from "@/ui/layout/dashboard/main";
 import { Shell } from "@/ui/layout/dashboard/shell";
 import { useAddEditDomainModal } from "@/components/modal/add-edit-domain-modal";
-import { useAddEditFunnelModal } from "@/ui/modals/add-edit-funnel-modal";
+import { useAddEditSiteModal } from "@/components/modal/add-edit-site-modal";
 
 export default function WorkspaceDomainsClient() {
 	const { id: workspaceId } = useWorkspace();
@@ -24,7 +24,7 @@ export default function WorkspaceDomainsClient() {
 		setShowAddEditDomainModal,
 		AddEditDomainButton,
 	} = useAddEditDomainModal();
-	const { setShowAddEditFunnelModal } = useAddEditFunnelModal();
+	const { setShowAddEditSiteModal } = useAddEditSiteModal();
 	const { domains } = useDomains();
 	const searchParams = useSearchParams();
 

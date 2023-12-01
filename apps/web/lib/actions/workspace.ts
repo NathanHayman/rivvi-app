@@ -31,12 +31,12 @@ export async function GetWorkspaceStudioKey(workspaceSlug: string) {
   return workspace.studioKey as string;
 }
 
-export async function GetFunnelsByWorkspace({
+export async function getSitesByWorkspace({
   workspaceSlug,
 }: {
   workspaceSlug: string;
 }) {
-  const funnels = await prisma.funnel.findMany({
+  const sites = await prisma.site.findMany({
     where: {
       workspace: {
         slug: workspaceSlug,
@@ -44,10 +44,10 @@ export async function GetFunnelsByWorkspace({
     },
   });
 
-  return funnels;
+  return sites;
 }
 
-export async function GetPagesByWorkspace({
+export async function getPagesByWorkspace({
   workspaceSlug,
 }: {
   workspaceSlug: string;
@@ -63,7 +63,8 @@ export async function GetPagesByWorkspace({
       id: true,
       slug: true,
       title: true,
-      funnelDomainSlug: true,
+      sanityDocumentId: true,
+      siteDomainSlug: true,
       published: true,
       domain: true,
     },

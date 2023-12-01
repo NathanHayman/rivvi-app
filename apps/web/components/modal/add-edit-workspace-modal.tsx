@@ -24,6 +24,7 @@ import {
 } from "@phunq/utils";
 import slugify from "@sindresorhus/slugify";
 import {
+	Button,
 	InfoTooltip,
 	Input,
 	Label,
@@ -64,6 +65,30 @@ function AddEditWorkspaceModalHelper({
 		domain: "",
 	});
 	const { name, slug, domain } = data;
+
+	const [debouncedSlug] = useDebounce(slug, 500);
+	useEffect(() => {
+		if (debouncedSlug.length > 0 && !slugError) {
+			fetch(`/api/workspaces/${slug}/exists`).then(async (res) => {
+				if (res.status === 200) {
+					const exists = await res.json();
+					setSlugError(exists === 1 ? "Slug is already in use." : null);
+				}
+			});
+		}
+	}, [debouncedSlug, slugError]);
+
+	const [debouncedDomain] = useDebounce(domain, 500);
+	useEffect(() => {
+		if (debouncedDomain.length > 0 && !domainError) {
+			fetch(`/api/domains/${debouncedDomain}/exists`).then(async (res) => {
+				if (res.status === 200) {
+					const exists = await res.json();
+					setDomainError(exists === 1 ? "Domain is already in use." : null);
+				}
+			});
+		}
+	}, [debouncedDomain, domainError]);
 
 	useEffect(() => {
 		setSlugError(null);
@@ -111,8 +136,16 @@ function AddEditWorkspaceModalHelper({
 				</a>
 			</div>
 			<form
-				action={async (data: FormData) =>
-					createWorkspace(data).then(async (res: any) => {
+				onSubmit={async (e: FormEvent<HTMLFormElement>) => {
+					e.preventDefault();
+					setSaving(true);
+					fetch("/api/workspaces", {
+						method: "POST",
+						headers: {
+							"Content-Type": "application/json",
+						},
+						body: JSON.stringify(data),
+					}).then(async (res) => {
 						if (res.status === 200) {
 							// track workspace creation event
 							va.track("Created Workspace");
@@ -142,8 +175,8 @@ function AddEditWorkspaceModalHelper({
 							toast.error(res.statusText);
 						}
 						setSaving(false);
-					})
-				}
+					});
+				}}
 				className="bg-modal flex flex-col space-y-6 px-4 py-8 pt-6 text-left sm:px-8"
 			>
 				{/* WORKSPACE NAME */}
@@ -276,25 +309,13 @@ function AddEditWorkspaceModalHelper({
 					)}
 				</AnimatePresence>
 
-				<CreateWorkspaceFormButton />
+				<Button
+					disabled={slugError || domainError ? true : false}
+					loading={saving}
+					text="Create Workspace"
+				/>
 			</form>
 		</Modal>
-	);
-}
-function CreateWorkspaceFormButton() {
-	const { pending } = useFormStatus();
-	return (
-		<button
-			className={cn(
-				"flex h-10 w-full items-center justify-center space-x-2 rounded-md border text-sm transition-all focus:outline-none",
-				pending
-					? "cursor-not-allowed border-stone-200 bg-stone-100 text-stone-400 dark:border-stone-700 dark:bg-stone-800 dark:text-stone-300"
-					: "border-black bg-black text-white hover:bg-white hover:text-black dark:border-stone-700 dark:hover:border-stone-200 dark:hover:bg-black dark:hover:text-white dark:active:bg-stone-800"
-			)}
-			disabled={pending}
-		>
-			{pending ? <LoadingDots color="#808080" /> : <p>Create Workspace</p>}
-		</button>
 	);
 }
 

@@ -8,7 +8,7 @@ import { linkConstructor } from "./utils";
 async function main() {
   const workspace = await prisma.workspace.findUnique({
     where: {
-      slug: "phunq",
+      slug: "rivvi",
     },
     select: {
       id: true,
@@ -36,9 +36,9 @@ async function main() {
     console.log("No workspace found");
     return;
   }
-  const topFunnels = await getStats({
+  const topSites = await getStats({
     domain: workspace.domains.map((domain) => domain.slug).join(","),
-    endpoint: "top_funnels",
+    endpoint: "top_sites",
     interval: "30d",
   }).then((data) =>
     data
@@ -53,13 +53,13 @@ async function main() {
           key: string;
           clicks: number;
         }) => ({
-          funnel: linkConstructor({ domain, key, pretty: true }),
+          site: linkConstructor({ domain, key, pretty: true }),
           clicks,
         }),
       ),
   );
 
-  console.table(topFunnels);
+  console.table(topSites);
 }
 
 main();

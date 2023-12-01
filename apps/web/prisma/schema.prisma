@@ -254,6 +254,8 @@ model Site {
   id            String   @id @default(cuid())
   name          String?
   domain        String?  @unique
+  clicks        Int      @default(0)
+  publicStats   Boolean  @default(false) // whether to show public stats or not
   key           String? // Instead of using "slug", since it's used in the workspace we use "key" instead to avoid confusion
   archived      Boolean  @default(false) // Indicates if the funnel is archived
   description   String?  @db.Text

@@ -6,8 +6,8 @@ import { ArrowLeft } from "lucide-react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 
-import { useAddEditFunnelModal } from "@/ui/modals/add-edit-funnel-modal";
-import { useAddWorkspaceModal } from "@/ui/modals/add-workspace-modal";
+import { useAddEditSiteModal } from "@/components/modal/add-edit-site-modal";
+import { useAddEditWorkspaceModal } from "@/components/modal/add-edit-workspace-modal";
 import { useUpgradePlanModal } from "@/components/modal/upgrade-plan-modal";
 import Interim from "@/ui/onboarding/interim";
 import Intro from "@/ui/onboarding/intro";
@@ -16,13 +16,10 @@ import { ThemeSwitch } from "@/ui/shared/theme-switch";
 
 export default function OnbardingPageClient() {
 	const {
-		setShowAddWorkspaceModal,
-		AddWorkspaceModal,
-	} = useAddWorkspaceModal();
-	const {
-		setShowAddEditFunnelModal,
-		AddEditFunnelModal,
-	} = useAddEditFunnelModal();
+		setShowAddEditWorkspaceModal,
+		AddEditWorkspaceModal,
+	} = useAddEditWorkspaceModal();
+	const { setShowAddEditSiteModal, AddEditSiteModal } = useAddEditSiteModal();
 	const { setShowUpgradePlanModal, UpgradePlanModal } = useUpgradePlanModal();
 
 	const router = useRouter();
@@ -35,17 +32,17 @@ export default function OnbardingPageClient() {
 	useEffect(() => {
 		if (searchParams?.get("type") === "workspace") {
 			setTimeout(() => {
-				setShowAddWorkspaceModal(true);
+				setShowAddEditWorkspaceModal(true);
 			}, 200);
 		} else {
-			setShowAddWorkspaceModal(false);
+			setShowAddEditWorkspaceModal(false);
 		}
 		if (searchParams?.get("type") === "site") {
 			setTimeout(() => {
-				setShowAddEditFunnelModal(true);
+				setShowAddEditSiteModal(true);
 			}, 200);
 		} else {
-			setShowAddEditFunnelModal(false);
+			setShowAddEditSiteModal(false);
 		}
 		if (searchParams?.get("type") === "upgrade") {
 			setTimeout(() => {
@@ -56,16 +53,16 @@ export default function OnbardingPageClient() {
 		}
 	}, [
 		searchParams,
-		setShowAddEditFunnelModal,
-		setShowAddWorkspaceModal,
+		setShowAddEditSiteModal,
+		setShowAddEditWorkspaceModal,
 		setShowUpgradePlanModal,
 	]);
 
 	return (
 		<div className="relative flex h-screen flex-col items-center">
 			<Background />
-			<AddWorkspaceModal />
-			<AddEditFunnelModal />
+			<AddEditWorkspaceModal />
+			<AddEditSiteModal />
 			<UpgradePlanModal />
 			<AnimatePresence mode="wait">
 				{!searchParams?.get("type") && <Intro key="intro" />}

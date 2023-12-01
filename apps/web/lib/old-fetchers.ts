@@ -97,7 +97,7 @@ export const getFunnels = cache(
 
 export const getFunnel = cache(
   async ({ domain, key }: { domain: string; key: string }) => {
-    return await prisma.funnel.findUnique({
+    return await prisma.site.findUnique({
       where: {
         domain_key: {
           domain,

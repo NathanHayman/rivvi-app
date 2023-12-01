@@ -8,7 +8,7 @@ import { ModalContext } from "@/components/modal/provider";
 import { BlurImage } from "@/ui/shared/blur-image";
 
 export default function NoWorkspacesPlaceholder() {
-	const { setShowAddWorkspaceModal } = useContext(ModalContext);
+	const { setShowAddEditWorkspaceModal } = useContext(ModalContext);
 
 	return (
 		<div className="col-span-3 flex flex-col items-center justify-center rounded-md border py-12">
@@ -23,7 +23,7 @@ export default function NoWorkspacesPlaceholder() {
 				className="pointer-events-none -my-8"
 			/>
 			<button
-				onClick={() => setShowAddWorkspaceModal(true)}
+				onClick={() => setShowAddEditWorkspaceModal(true)}
 				className={cn(buttonVariants({ variant: "secondary" }))}
 			>
 				Create a workspace

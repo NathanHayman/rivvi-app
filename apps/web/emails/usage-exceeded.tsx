@@ -45,7 +45,7 @@ export default function UsageExceeded({
 								src={PHUNQ_LOGO}
 								width="40"
 								height="40"
-								alt="Dub"
+								alt="Rivvi"
 								className="mx-auto my-0"
 							/>
 						</Section>
@@ -53,7 +53,7 @@ export default function UsageExceeded({
 							Usage Limit Exceeded
 						</Heading>
 						<Text className="text-sm leading-6 text-black">
-							Your Dub workspace, <strong> {name} </strong> has exceeded the
+							Your Rivvi workspace, <strong> {name} </strong> has exceeded the
 							<strong> {capitalize(plan)} Plan </strong>
 							limit of <strong>{nFormatter(usageLimit)} link clicks</strong>.
 							You have used{" "}

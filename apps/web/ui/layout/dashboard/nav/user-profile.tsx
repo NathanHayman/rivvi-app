@@ -9,27 +9,25 @@ import { useState } from "react";
 
 import { Logout } from "@/ui/shared/icons";
 import { ThemeSwitch } from "@/ui/shared/theme-switch";
-import { redirect } from "next/navigation";
-import { getSession } from "@/lib/auth";
 
-export default async function UserProfile() {
-	const session = await getSession();
-	if (!session?.user) {
-		redirect("/login");
-	}
+interface UserProfileProps extends React.HTMLAttributes<HTMLDivElement> {
+	user: Pick<User, "name" | "image" | "email">;
+}
+
+export function UserProfile({ user }: UserProfileProps) {
 	const [openPopover, setOpenPopover] = useState(false);
 	return (
 		<Popover
 			content={
 				<div className="border-border bg-popover text-popover-foreground mr-8 flex w-full flex-col space-y-px rounded-md border p-3 shadow-md sm:w-56">
 					<div className="p-2">
-						{session?.user?.name && (
+						{user?.name && (
 							<p className="text-foreground truncate text-sm font-medium">
-								{session?.user?.name}
+								{user?.name}
 							</p>
 						)}
 						<p className="text-muted-foreground truncate text-sm">
-							{session?.user?.email}
+							{user?.email}
 						</p>
 					</div>
 					<Link
@@ -59,9 +57,9 @@ export default async function UserProfile() {
 				onClick={() => setOpenPopover(!openPopover)}
 				className="group relative"
 			>
-				{session?.user ? (
+				{user ? (
 					<Avatar
-						user={session?.user as User}
+						user={user}
 						className="border-border h-8 w-8 border sm:h-9 sm:w-9"
 					/>
 				) : (

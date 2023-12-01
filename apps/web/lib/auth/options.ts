@@ -2,12 +2,26 @@ import { getServerSession, type NextAuthOptions } from "next-auth";
 import EmailProvider from "next-auth/providers/email";
 import GoogleProvider from "next-auth/providers/google";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
+import { createHash } from "crypto";
 import prisma from "@/lib/prisma";
 import { sendEmail } from "emails";
 import LoginLink from "emails/login-link";
 import WelcomeEmail from "emails/welcome-email";
 
 const VERCEL_DEPLOYMENT = !!process.env.VERCEL_URL;
+
+export const hashToken = (
+  token: string,
+  {
+    noSecret = false,
+  }: {
+    noSecret?: boolean;
+  } = {},
+) => {
+  return createHash("sha256")
+    .update(`${token}${noSecret ? "" : process.env.NEXTAUTH_SECRET}`)
+    .digest("hex");
+};
 
 export const authOptions: NextAuthOptions = {
   providers: [
@@ -19,7 +33,7 @@ export const authOptions: NextAuthOptions = {
         } else {
           sendEmail({
             email: identifier,
-            subject: "Your Phunq Login Link",
+            subject: "Your Rivvi Login Link",
             react: LoginLink({ url, email: identifier }),
           });
         }
@@ -134,7 +148,7 @@ export const authOptions: NextAuthOptions = {
           new Date(user.createdAt).getTime() > Date.now() - 10000
         ) {
           sendEmail({
-            subject: "Welcome to PHUNQ!",
+            subject: "Welcome to Rivvi!",
             email,
             react: WelcomeEmail({
               email,

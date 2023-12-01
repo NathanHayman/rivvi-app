@@ -19,7 +19,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function constructMetadata({
-  title = "PHUNQ | The No-Code, No Drag-and-Drop Page & Funnel Builder",
+  title = "Rivvi | The No-Code, No Drag-and-Drop Page & Funnel Builder",
   description = "Explore a new horizon of web design with rivvi.io - your gateway to creating professional pages and funnels without the drag-and-drop hassle. Experience true simplicity and power, no coding required.",
   image = "https://app.rivvi.io/_static/thumbnail.png",
   icons = "/favicon.ico",
@@ -62,7 +62,7 @@ export function constructMetadata({
 }
 
 export const generatePreviewUrl = (slug: string): string => {
-  return `${slug}.ruhe.app`;
+  return `${slug}.rivvi.app`;
 };
 
 export const nanoid = customAlphabet(
@@ -141,7 +141,7 @@ export const chunk = <T>(array: T[], chunk_size: number): T[][] => {
 };
 
 export function linkConstructor({
-  domain = "ruhe.app",
+  domain = "rivvi.app",
   key,
   localhost,
   pretty,

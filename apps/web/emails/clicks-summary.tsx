@@ -61,7 +61,7 @@ export default function ClicksSummary({
 	return (
 		<Html>
 			<Head />
-			<Preview>Your 30-day phunq summary for {workspaceName}</Preview>
+			<Preview>Your 30-day Rivvi summary for {workspaceName}</Preview>
 			<Tailwind>
 				<Body className="mx-auto my-auto bg-white font-sans">
 					<Container className="mx-auto my-10 max-w-[500px] rounded border border-solid border-gray-200 px-10 py-5">
@@ -70,15 +70,15 @@ export default function ClicksSummary({
 								src={PHUNQ_LOGO}
 								width="40"
 								height="40"
-								alt="phunq"
+								alt="Rivvi"
 								className="mx-auto my-0"
 							/>
 						</Section>
 						<Heading className="mx-0 my-7 p-0 text-center text-xl font-semibold text-black">
-							Your 30-day phunq summary for {workspaceName}
+							Your 30-day Rivvi summary for {workspaceName}
 						</Heading>
 						<Text className="text-sm leading-6 text-black">
-							In the last 30 days, your phunq workspace,{" "}
+							In the last 30 days, your Rivvi workspace,{" "}
 							<strong>{workspaceName}</strong> received{" "}
 							<strong>{nFormatter(totalClicks)} link clicks</strong>. You also
 							created <strong>{createdSites} new links</strong> during that

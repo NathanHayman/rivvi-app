@@ -14,7 +14,7 @@ import {
   File,
   FileText,
   Filter,
-  Globe,
+  Globe2Icon as Globe,
   HelpCircle,
   Image,
   Laptop,

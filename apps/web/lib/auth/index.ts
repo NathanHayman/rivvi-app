@@ -233,7 +233,7 @@ export const withAuth =
       }
 
       // if it's the default dub.sh funnel, we need to make sure the user is the owner of the funnel
-      if (site.domain === "rivvi.app" && site.id !== session.user.id) {
+      if (site.domain === "ruhe.app" && site.userId !== session.user.id) {
         return new Response("Unauthorized: Invalid site.", {
           status: 403,
           headers,

@@ -6,6 +6,7 @@ import { redis } from "@/lib/upstash";
 
 import { Session } from "../auth";
 import { SiteProps, WorkspaceProps } from "../types";
+import { isReservedKey } from "../edge-config";
 
 export async function getSitesForWorkspace({
   workspaceId,
@@ -46,7 +47,7 @@ export async function getSitesCount({
   userId?: string | null;
 }): Promise<any> {
   let { groupBy, domain, showArchived } = searchParams as {
-    groupBy?: "domain";
+    groupBy?: "domain" | "userId";
     domain?: string;
     showArchived?: boolean;
   };
@@ -99,6 +100,12 @@ export async function getRandomKey(domain: string): Promise<string> {
 }
 
 export async function checkIfKeyExists(domain: string, key: string) {
+  if (
+    domain === "rivvi.app" &&
+    ((await isReservedKey(key)) || key === "studio" || key === "login")
+  ) {
+    return true; // reserved keys for ruhe.app
+  }
   const site = await prisma.site.findUnique({
     where: {
       domain_key: {
@@ -131,7 +138,7 @@ export async function processSite({
   workspace: WorkspaceProps | null;
   session?: Session;
 }) {
-  let { domain, key } = payload;
+  let { domain, key, image } = payload;
 
   if (!domain) {
     return {
@@ -181,15 +188,17 @@ export async function processSite({
 
 export async function addSite(site: SiteProps) {
   const { domain, key, name, description, image } = site;
-  // const hasPassword = password && password.length > 0 ? true : false;
-  // const exat = expiresAt ? new Date(expiresAt).getTime() / 1000 : null;
   const uploadedImage = image && image.startsWith("data:image") ? true : false;
 
   const exists = await checkIfKeyExists(domain as string, key as string);
-  if (exists) return null;
-
-  // const { utm_source, utm_medium, utm_campaign, utm_term, utm_content } =
-  //   getParamsFromURL(url);
+  if (exists) {
+    const error = "Key already exists.";
+    return {
+      site,
+      error,
+      status: 409,
+    };
+  }
 
   let [response, _] = await Promise.all([
     prisma.site.create({
@@ -197,14 +206,8 @@ export async function addSite(site: SiteProps) {
         ...site,
         key,
         name: truncate(name, 120) as string,
-        description: truncate(description, 240) as string,
+        description: truncate(description, 240) as string | null,
         image: uploadedImage ? undefined : image,
-        // utm_source,
-        // utm_medium,
-        // utm_campaign,
-        // utm_term,
-        // utm_content,
-        // geo: geo || undefined,
       },
     }),
     redis.set(`${domain}:${key}`, {
@@ -222,10 +225,10 @@ export async function addSite(site: SiteProps) {
   ]);
   if (image) {
     const { secure_url } = await cloudinary.v2.uploader.upload(image, {
-      public_id: key as string,
+      // public_id: key,
       folder: domain as string,
-      overwrite: true as boolean,
-      invalidate: true as boolean,
+      overwrite: true,
+      invalidate: true,
     });
     response = await prisma.site.update({
       where: {
@@ -259,7 +262,6 @@ export async function editSite({
   }
 
   // exclude fields that should not be updated
-  // const { id: _, clicks, lastClicked, updatedAt, ...rest } = updatedSite;
   const { id: _, updatedAt, ...rest } = updatedSite;
 
   const [response, ...effects] = await Promise.all([
@@ -271,7 +273,7 @@ export async function editSite({
         ...rest,
         key,
         name: truncate(name, 120) as string,
-        description: truncate(description, 240),
+        description: truncate(description, 240) as string | null,
         image: uploadedImage ? undefined : image,
       },
     }),
@@ -280,15 +282,30 @@ export async function editSite({
       ? cloudinary.v2.uploader.upload(image, {
           public_id: key as string,
           folder: domain as string,
-          overwrite: true as boolean,
-          invalidate: true as boolean,
+          overwrite: true,
+          invalidate: true,
         })
       : cloudinary.v2.uploader.destroy(`${domain}/${key}`, {
           invalidate: true,
         }),
-    redis.set(`${domain}:${key}`, {
-      nx: true,
-    }),
+    redis.set(
+      `${domain}:${key}`,
+      {
+        // url: encodeURIComponent(url),
+        // password: hasPassword,
+        // proxy,
+        // ...(rewrite && {
+        //   rewrite: true,
+        //   iframeable: await isIframeable({ url, requestDomain: domain }),
+        // }),
+        // ...(ios && { ios }),
+        // ...(android && { android }),
+        // ...(geo && { geo }),
+      },
+      {
+        nx: true,
+      },
+    ),
     // if key is changed: rename resource in Cloudinary, delete the old key in Redis and change the clicks key name
     ...(changedDomain || changedKey
       ? [
@@ -336,11 +353,33 @@ export async function deleteSite({
     cloudinary.v2.uploader.destroy(`${domain}/${key}`, {
       invalidate: true,
     }),
+    // deleteClickData({
+    //   domain,
+    //   key,
+    // }),
     redis.del(`${domain}:${key}`),
   ]);
 }
 
 export async function archiveSite(
+  domain: string,
+  key: string,
+  archived = true,
+) {
+  return await prisma.site.update({
+    where: {
+      domain_key: {
+        domain,
+        key,
+      },
+    },
+    data: {
+      archived,
+    },
+  });
+}
+
+export async function archiveFunnel(
   domain: string,
   key: string,
   archived = true,

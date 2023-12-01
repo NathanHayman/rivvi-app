@@ -1,9 +1,9 @@
 "use server";
-import { getDomainWithoutWWW,PHUNQ_ADMIN_ID } from "@phunq/utils";
+import { getDomainWithoutWWW, PHUNQ_ADMIN_ID } from "@phunq/utils";
 import { get } from "@vercel/edge-config";
 import { randomBytes } from "crypto";
 
-import { deleteDomainAndFunnels } from "@/lib/api/domains";
+import { deleteDomainAndSites } from "@/lib/api/domains";
 import { deleteWorkspace } from "@/lib/api/workspace";
 import { getSession, hashToken } from "@/lib/auth";
 import prisma from "@/lib/prisma";
@@ -122,18 +122,18 @@ export async function getUserByKey(data: FormData) {
 
   const response = await prisma.user.findFirst({
     where: {
-      funnels: {
+      sites: {
         some: {
-          domain: "ruhe.app",
+          domain: "rivvi.app",
           key,
         },
       },
     },
     select: {
       email: true,
-      funnels: {
+      sites: {
         where: {
-          domain: "ruhe.app",
+          domain: "rivvi.app",
           key,
         },
         select: {
@@ -169,12 +169,12 @@ export async function getUserByKey(data: FormData) {
     };
   }
 
-  const { email, funnels, workspaces } = response;
+  const { email, sites, workspaces } = response;
 
   const hostnames = new Set<string>();
 
-  funnels.map((funnel) => {
-    const hostname = getDomainWithoutWWW(funnel.key as string);
+  sites.map((site) => {
+    const hostname = getDomainWithoutWWW(site.key as string);
     hostname && hostnames.add(hostname);
   });
 
@@ -240,7 +240,7 @@ export async function banUser(data: FormData) {
   const blacklistedEmails = (await get("emails")) as string[];
 
   const ban = await Promise.allSettled([
-    deleteDomainAndFunnels(user.id),
+    deleteDomainAndSites(user.id),
     fetch(
       `https://api.vercel.com/v1/edge-config/${process.env.EDGE_CONFIG_ID}/items?teamId=${process.env.TEAM_ID_VERCEL}`,
       {

@@ -104,7 +104,7 @@ const DomainsTooltip = ({
 			<p className="text-muted-foreground px-2 text-sm">{title}</p>
 			<div className="flex w-full flex-col">
 				{domains.map(({ slug, verified }) => (
-					<a
+					<Link
 						key={slug}
 						href={`https://${slug}`}
 						target="_blank"
@@ -120,7 +120,7 @@ const DomainsTooltip = ({
 							<p className="text-foreground text-sm font-semibold">{slug}</p>
 						</div>
 						<ExternalLink className="text-muted-foreground h-4 w-4 md:invisible md:group-hover:visible" />
-					</a>
+					</Link>
 				))}
 			</div>
 

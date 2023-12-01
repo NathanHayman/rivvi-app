@@ -29,7 +29,7 @@ function CompleteSetupModal({
 	const { data: count } = useSitesCount();
 	const { users } = useUsers();
 	const { users: invites } = useUsers({ invites: true });
-	const { setShowAddSiteModal } = useContext(ModalContext);
+	const { setShowAddEditSiteModal } = useContext(ModalContext);
 
 	const tasks = useMemo(() => {
 		return [
@@ -87,7 +87,7 @@ function CompleteSetupModal({
 								href={cta}
 								onClick={() => {
 									setShowCompleteSetupModal(false);
-									display === "Create a site" && setShowAddSiteModal(true);
+									display === "Create a site" && setShowAddEditSiteModal(true);
 								}}
 							>
 								{contents}

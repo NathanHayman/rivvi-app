@@ -16,16 +16,6 @@ export default defineField({
       name: "body",
       title: "Body",
       type: "text",
-      rows: 2,
     }),
-    // Color theme
-    /*
-    defineField({
-      name: 'theme',
-      title: 'Color theme',
-      type: 'reference',
-      to: [{ type: 'theme' }]
-    })
-    */
   ],
 });

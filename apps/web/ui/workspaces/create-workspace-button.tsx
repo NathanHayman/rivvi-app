@@ -7,10 +7,10 @@ import { useContext } from "react";
 import { ModalContext } from "@/components/modal/provider";
 
 export default function CreateWorkspaceButton() {
-	const { setShowAddWorkspaceModal } = useContext(ModalContext);
+	const { setShowAddEditWorkspaceModal } = useContext(ModalContext);
 	return (
 		<button
-			onClick={() => setShowAddWorkspaceModal(true)}
+			onClick={() => setShowAddEditWorkspaceModal(true)}
 			className={cn(
 				buttonVariants({ variant: "default", size: "sm" }),
 				"w-fit px-8"

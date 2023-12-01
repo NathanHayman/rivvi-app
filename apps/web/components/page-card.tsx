@@ -1,5 +1,8 @@
+"use client";
+
 import BlurImage from "@/components/blur-image";
 import { placeholderBlurhash, random } from "@/lib/utils";
+import { Badge, Card } from "@phunq/ui";
 import { Page, Site } from "@prisma/client";
 import { BarChart, ExternalLink } from "lucide-react";
 import Link from "next/link";
@@ -12,11 +15,8 @@ export default function PageCard({
 	const url = `${data.site?.subdomain}.${process.env.NEXT_PUBLIC_USER_SUBDOMAIN}/${data.slug}`;
 
 	return (
-		<div className="relative rounded-lg border border-stone-200 pb-10 shadow-md transition-all hover:shadow-xl dark:border-stone-700 dark:hover:border-white">
-			<Link
-				href={`/page/${data.id}`}
-				className="flex flex-col overflow-hidden rounded-lg"
-			>
+		<Card className="border-accent hover:bg-secondary/10 bg-card hover:shadow-primary/40 relative flex w-fit cursor-pointer flex-col items-start justify-between space-y-6 p-4 shadow-sm transition-shadow hover:shadow-md lg:col-span-2">
+			<Link href={`/page/${data.id}`} className="flex flex-col ">
 				<div className="relative h-44 overflow-hidden">
 					<BlurImage
 						alt={data.title ?? "Card thumbnail"}
@@ -28,18 +28,16 @@ export default function PageCard({
 						blurDataURL={data.imageBlurhash ?? placeholderBlurhash}
 					/>
 					{!data.published && (
-						<span className="absolute bottom-2 right-2 rounded-md border border-stone-200 bg-white px-3 py-0.5 text-sm font-medium text-stone-600 shadow-md">
+						<Badge variant="secondary" className="absolute top-4 left-4">
 							Draft
-						</span>
+						</Badge>
 					)}
 				</div>
-				<div className="border-t border-stone-200 p-4 dark:border-stone-700">
-					<h3 className="my-0 truncate font-cal text-xl font-bold tracking-wide dark:text-white">
+				<div className="border-t p-4">
+					<h3 className="text-foreground text-lg font-semibold tracking-tight">
 						{data.title}
 					</h3>
-					<p className="mt-2 line-clamp-1 text-sm font-normal leading-snug text-stone-500 dark:text-stone-400">
-						{data.description}
-					</p>
+					<p className="text-muted-foreground text-sm">{data.description}</p>
 				</div>
 			</Link>
 			<div className="absolute bottom-4 flex w-full px-4">
@@ -51,11 +49,10 @@ export default function PageCard({
 					}
 					target="_blank"
 					rel="noreferrer"
-					className="truncate rounded-md bg-stone-100 px-2 py-1 text-sm font-medium text-stone-600 transition-colors hover:bg-stone-200 dark:bg-stone-800 dark:text-stone-400 dark:hover:bg-stone-700"
 				>
 					{url} ↗
 				</a>
 			</div>
-		</div>
+		</Card>
 	);
 }

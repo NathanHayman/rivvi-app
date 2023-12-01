@@ -7,10 +7,10 @@ import { useContext } from "react";
 import { ModalContext } from "@/components/modal/provider";
 
 export default function CreateSiteButton() {
-	const { setShowAddSiteModal } = useContext(ModalContext);
+	const { setShowAddEditSiteModal } = useContext(ModalContext);
 	return (
 		<button
-			onClick={() => setShowAddSiteModal(true)}
+			onClick={() => setShowAddEditSiteModal(true)}
 			className={cn(
 				buttonVariants({ variant: "default", size: "sm" }),
 				"w-fit px-8"

@@ -5,7 +5,6 @@ import { cn } from "@phunq/utils";
 import Link from "next/link";
 import { useParams, useSelectedLayoutSegments } from "next/navigation";
 import { useMemo } from "react";
-import UpgradeBanner from "../../upgrade-banner";
 
 const Sidebar = ({ children }: { children: React.ReactNode }) => {
 	const segments = useSelectedLayoutSegments();
@@ -69,6 +68,13 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
 					group: 1,
 				},
 				{
+					name: "Studio",
+					href: `/${workspaceSlug}/studio`,
+					isActive: segments.includes("studio"),
+					icon: "funnelEditor",
+					group: 2,
+				},
+				{
 					name: "Domains",
 					href: `/${workspaceSlug}/domains`,
 					isActive: segments.includes("domains"),
@@ -109,23 +115,32 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
 		];
 	}, [segments, key, workspaceSlug]);
 
+	const showSidebar = true;
+
 	return (
 		<div
 			className={cn(
-				"w-44 lg:w-[265px] hidden h-full flex-shrink-0 flex-col justify-between md:flex"
+				showSidebar ? "w-44 lg:w-[265px]" : "w-12 lg:w-14",
+				"hidden h-full flex-shrink-0 flex-col justify-between md:flex"
 			)}
 		>
 			<div className="space-y-4 py-4">
 				{children}
-				<div className="flex items-center">
-					<UpgradeBanner />
-				</div>
 				<div
 					className={cn(
-						"flex w-full items-start  justify-start px-6 py-2space-x-2"
+						"flex w-full ",
+						showSidebar
+							? "items-start  justify-start px-6 py-2"
+							: "items-center justify-center px-0 py-0",
+						"space-x-2"
 					)}
 				></div>
-				<div className={cn("px-3 py-2 flex flex-col space-y-2")}>
+				<div
+					className={cn(
+						showSidebar ? "px-3 py-2" : "px-1.5 py-2",
+						"flex flex-col space-y-2"
+					)}
+				>
 					<div className="flex flex-col space-y-2">
 						{tabs.map((item, index) => {
 							const Icon = DashIcons[item.icon as keyof typeof DashIcons];
@@ -137,11 +152,20 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
 											className={cn(
 												"hover:bg-muted/50 hover:text-foreground text-muted-foreground w-full rounded-md font-medium transition-all focus:outline-none",
 												item.isActive &&
-													"bg-muted/50 border-border text-foreground justify-start  px-3 py-1"
+													"bg-muted/50 border-border text-foreground",
+												showSidebar
+													? "justify-start  px-3 py-1"
+													: "justify-center px-0 py-0"
 											)}
 										>
-											<Icon className={cn("h-5 w-5 mr-2")} />
-											<span className={cn("inline-block")}>{item.name}</span>
+											<Icon
+												className={cn("h-5 w-5", showSidebar ? "mr-2" : "mr-0")}
+											/>
+											<span
+												className={cn(showSidebar ? "inline-block" : "hidden")}
+											>
+												{item.name}
+											</span>
 										</Button>
 									</Link>
 								)

@@ -17,9 +17,6 @@ export default async function AppMiddleware(req: NextRequest) {
   };
   // if there's no session and the path isn't /login or /register, redirect to /login
   if (!session?.email && path !== "/login" && path !== "/register") {
-    console.log(
-      "middleware/app.ts: !session?.email && path !== /login && path !== /register",
-    );
     return NextResponse.redirect(
       new URL(
         `/login${path !== "/" ? `?next=${encodeURIComponent(path)}` : ""}`,
@@ -63,32 +60,23 @@ export default async function AppMiddleware(req: NextRequest) {
 
         // redirect them to the workspace slug
         if (workspace?.slug) {
-          console.log("middleware/app.ts: workspace?.slug");
-
           return NextResponse.redirect(new URL(workspace.slug, req.url));
         } else {
-          console.log("middleware/app.ts: !workspace?.slug");
-
           // if there's no workspace slug, redirect to "/"
           return NextResponse.redirect(new URL("/", req.url));
         }
       } else {
-        console.log("middleware/app.ts: !existingInvite");
-
         // if there's no existing invite, redirect to /welcome flow
         return NextResponse.redirect(new URL("/onboarding", req.url));
       }
 
       // if the path is /login or /register, redirect to "/"
     } else if (path === "/login" || path === "/register") {
-      console.log("middleware/app.ts: path === /login || /register");
-
       return NextResponse.redirect(new URL("/", req.url));
     }
   }
 
   // otherwise, rewrite the path to /app/page
-  console.log("middleware/app.ts: rewrite");
   return NextResponse.rewrite(
     new URL(`/app.rivvi.io${fullPath === "/" ? "" : fullPath}`, req.url),
   );

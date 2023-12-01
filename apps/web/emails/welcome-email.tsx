@@ -25,7 +25,7 @@ export default function WelcomeEmail({
 	return (
 		<Html>
 			<Head />
-			<Preview>Welcome to Dub</Preview>
+			<Preview>Welcome to Rivvi</Preview>
 			<Tailwind>
 				<Body className="mx-auto my-auto bg-white font-sans">
 					<Container className="mx-auto my-10 max-w-[500px] rounded border border-solid border-gray-200 px-10 py-5">
@@ -34,21 +34,25 @@ export default function WelcomeEmail({
 								src={PHUNQ_LOGO}
 								width="40"
 								height="40"
-								alt="Dub"
+								alt="Rivvi"
 								className="mx-auto my-0"
 							/>
 						</Section>
 						<Heading className="mx-0 my-7 p-0 text-center text-xl font-semibold text-black">
-							Welcome to Dub
+							Welcome to Rivvi
 						</Heading>
 						<Section className="my-8">
-							<Img src={PHUNQ_THUMBNAIL} alt="Dub" className="max-w-[500px]" />
+							<Img
+								src={PHUNQ_THUMBNAIL}
+								alt="Rivvi"
+								className="max-w-[500px]"
+							/>
 						</Section>
 						<Text className="text-sm leading-6 text-black">
 							Thanks for signing up{name && `, ${name}`}!
 						</Text>
 						<Text className="text-sm leading-6 text-black">
-							My name is Steven, and I&apos;m the founder of Dub - the link
+							My name is Steven, and I&apos;m the founder of Rivvi - the link
 							management tool for modern marketing teams. I&apos;m excited to
 							have you on board!
 						</Text>
@@ -58,16 +62,16 @@ export default function WelcomeEmail({
 						<Text className="ml-1 text-sm leading-4 text-black">
 							◆ Create a{" "}
 							<Link
-								href="https://app.dub.co/links"
+								href="https://app.rivvi.io/links"
 								className="font-medium text-blue-600 no-underline"
 							>
-								Dub.sh short link
+								Rivvi short link
 							</Link>
 						</Text>
 						<Text className="ml-1 text-sm leading-4 text-black">
 							◆ Create a{" "}
 							<Link
-								href="https://app.dub.co"
+								href="https://app.rivvi.io"
 								className="font-medium text-blue-600 no-underline"
 							>
 								new workspace
@@ -77,7 +81,7 @@ export default function WelcomeEmail({
 						<Text className="ml-1 text-sm leading-4 text-black">
 							◆ Follow us on{" "}
 							<Link
-								href="https://twitter.com/dubdotco"
+								href="https://twitter.com/rivviio"
 								className="font-medium text-blue-600 no-underline"
 							>
 								Twitter
@@ -88,7 +92,7 @@ export default function WelcomeEmail({
 							happy to help!
 						</Text>
 						<Text className="text-sm font-light leading-6 text-gray-400">
-							Steven from Dub
+							Nathan from Rivvi
 						</Text>
 
 						<Footer email={email} marketing />

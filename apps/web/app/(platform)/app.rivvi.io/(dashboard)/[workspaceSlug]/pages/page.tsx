@@ -1,5 +1,5 @@
 import SyncFromStudio from "@/components/sync-pages-button";
-import { GetPagesByWorkspace } from "@/lib/actions/workspace";
+import { getPagesByWorkspace } from "@/lib/actions/workspace";
 import { DataTable } from "@/ui/sites/pages";
 import { columns } from "@/ui/sites/pages/columns";
 import { Header } from "@/ui/layout/dashboard/header";
@@ -14,7 +14,7 @@ export default async function WorkspacePagesPage({
 	params: { workspaceSlug: string };
 }) {
 	const { workspaceSlug } = params as { workspaceSlug: string };
-	const allPages = await GetPagesByWorkspace({ workspaceSlug });
+	const allPages = await getPagesByWorkspace({ workspaceSlug });
 
 	if (!allPages) {
 		return <div>loading...</div>;

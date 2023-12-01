@@ -101,17 +101,14 @@ export const FADE_IN_ANIMATION_SETTINGS = {
 export const PAGINATION_LIMIT = 100;
 
 // @ts-expect-error because we're coercing the type here
-export const DEFAULT_FUNNEL_PROPS: FunnelProps = {
+export const DEFAULT_SITE_PROPS: SiteProps = {
   id: "",
   domain: "",
 
   key: null, // Unique slug for the funnel
-  rootPath: null, // Represents the root path of the funnel on its associated domain
-
-  published: false, // Indicates if the funnel is published
   archived: false, // Indicates if the funnel is archived
 
-  title: "",
+  name: "",
   description: null,
   logo: null,
   font: "Inter",

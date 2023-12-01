@@ -15,7 +15,7 @@ async function main() {
       },
       _count: {
         select: {
-          funnels: true,
+          sites: true,
           domains: true,
         },
       },

@@ -4,7 +4,6 @@ import { Nav } from "@/ui/layout/dashboard/nav";
 import Sidebar from "@/ui/layout/dashboard/sidebar";
 import WorkspaceSelect from "@/ui/layout/workspace-select";
 import WorkspaceSelectPlaceholder from "@/ui/layout/workspace-select/placeholder";
-import UserProfile from "@/ui/layout/dashboard/nav/user-profile";
 
 export default function AppLayout({ children }: { children: ReactNode }) {
 	return (
@@ -18,11 +17,7 @@ export default function AppLayout({ children }: { children: ReactNode }) {
 				</Sidebar>
 			</nav>
 			<div className="w-full pb-20">
-				<Nav>
-					<Suspense fallback={<div>Loading...</div>}>
-						<UserProfile />
-					</Suspense>
-				</Nav>
+				<Nav />
 				{children}
 			</div>
 		</div>

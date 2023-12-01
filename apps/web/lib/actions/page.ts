@@ -1,21 +1,13 @@
 "use server";
 
 import { validDomainRegex } from "@phunq/utils";
-import { Page, Workspace } from "@prisma/client";
-import { put } from "@vercel/blob";
-import { nanoid } from "nanoid";
+import { Page } from "@prisma/client";
 import { revalidatePath, revalidateTag } from "next/cache";
 
-import {
-  withCustomPageAuth,
-  withPageAuth,
-  withWorkspaceAuthNew,
-} from "@/lib/auth-server";
+import { withPageAuth } from "../auth/options";
 import prisma from "@/lib/prisma";
 import { getAllPageDocIds } from "@/lib/cms/backend";
-
 import { addDomainToVercel } from "../api/domains";
-import { getBlurDataURL } from "../images";
 
 export const syncPagesFromSanity = async (
   slug: string,
@@ -263,151 +255,3 @@ export async function addPagesToSite({
 
   return siteWithPages;
 }
-
-export const createCustomPage = withWorkspaceAuthNew(
-  async (formData: FormData, workspace: Workspace) => {
-    const title = formData.get("title") as string;
-    const slug = formData.get("slug") as string;
-    const domain = formData.get("domain") as string;
-
-    const response = await prisma.page.create({
-      data: {
-        domain: domain,
-        title: title,
-        slug: slug,
-        type: "custom",
-        relationType: "standalone",
-        workspace: {
-          connect: {
-            id: workspace.id,
-          },
-        },
-      },
-    });
-
-    if (!response) {
-      return {
-        error: "Not authorized",
-      };
-    }
-
-    await revalidateTag(`${domain}.${slug}`);
-
-    return response;
-  },
-);
-
-// creating a separate function for this because we're not using FormData
-export const updateCustomPage = async (data: Page) => {
-  const page = await prisma.page.findUnique({
-    where: {
-      id: data.id,
-    },
-    include: {
-      workspace: true,
-    },
-  });
-  if (!page) {
-    return {
-      error: "Page not found",
-    };
-  }
-  try {
-    const response = await prisma.page.update({
-      where: {
-        id: data.id,
-      },
-      data: {
-        title: data.title,
-        description: data.description,
-        content: data.content,
-      },
-    });
-
-    await revalidateTag(`${page.domain}.${page.slug}-${page.slug}`);
-
-    return response;
-  } catch (error: any) {
-    return {
-      error: error.message,
-    };
-  }
-};
-
-export const updateCustomPageMetadata = withCustomPageAuth(
-  async (
-    formData: FormData,
-    page: Page & {
-      workspace: Workspace;
-    },
-    key: string,
-  ) => {
-    const value = formData.get(key) as string;
-
-    try {
-      let response;
-      if (key === "image") {
-        const file = formData.get("image") as File;
-        const filename = `${nanoid()}.${file.type.split("/")[1]}`;
-
-        const { url } = await put(filename, file, {
-          access: "public",
-        });
-
-        const blurhash = await getBlurDataURL(url);
-
-        response = await prisma.page.update({
-          where: {
-            id: page.id,
-          },
-          data: {
-            image: url,
-            imageBlurhash: blurhash,
-          },
-        });
-      } else {
-        response = await prisma.page.update({
-          where: {
-            id: page.id,
-          },
-          data: {
-            [key]: key === "published" ? value === "true" : value,
-          },
-        });
-      }
-      await revalidateTag(`${page.domain}.${page.slug}-${page.slug}`);
-
-      return response;
-    } catch (error: any) {
-      if (error.code === "P2002") {
-        return {
-          error: `This slug is already in use`,
-        };
-      } else {
-        return {
-          error: error.message,
-        };
-      }
-    }
-  },
-);
-
-export const deleteCustomPage = withCustomPageAuth(
-  async (_: FormData, page: Page) => {
-    try {
-      const response = await prisma.page.delete({
-        where: {
-          id: page.id,
-        },
-        select: {
-          domain: true,
-        },
-      });
-      return response;
-    } catch (error: any) {
-      return {
-        error: error.message,
-      };
-    }
-  },
-);
