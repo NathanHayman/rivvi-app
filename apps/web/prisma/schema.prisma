@@ -1,0 +1,382 @@
+// ----------------------------------------------------------------------- //
+
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["fullTextSearch", "fullTextIndex"]
+}
+
+// ----------------------------------------------------------------------- //
+
+// Role of the user in the system
+enum Role {
+  ADMIN
+  USER
+}
+
+// Role of the user in the workspace
+enum WorkspaceRole {
+  OWNER
+  MEMBER
+}
+
+// Type of the email
+enum EmailType {
+  firstDomainInvalidEmail
+  secondDomainInvalidEmail
+}
+
+// Type of page (this will either be a page from the studio or a custom page)
+enum PageType {
+  studio
+  custom
+}
+
+// Type of page relation (standalone page or funnel page)
+enum PageRelationType {
+  standalone
+  standard
+}
+
+// ----------------------------------------------------------------------- //
+
+// User model
+model User {
+  id String @id @default(cuid())
+
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+
+  role Role @default(USER)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // RELATIONS
+  workspaces WorkspaceUser[]
+  sites      Site[]
+  accounts   Account[]
+  sessions   Session[]
+  SentEmail  SentEmail[]
+}
+
+// User account model
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@index([userId])
+}
+
+// Session model
+model Session {
+  id           String @id @default(cuid())
+  sessionToken String @unique
+  userId       String
+
+  expires DateTime
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+// Verification token model
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+// ----------------------------------------------------------------------- //
+
+// Workspace model
+model Workspace {
+  id                String  @id @default(cuid())
+  studioKey         String  @unique // Represents the "sanity project id"
+  studioTokenEditor String? @unique // Represents the "sanity token editor"
+  slug              String  @unique
+  rootDomain        String  @unique // Represents the root domain of the workspace
+
+  name String
+  logo String?
+
+  stripeId          String? @unique
+  usage             Int     @default(0)
+  usageLimit        Int     @default(1000)
+  plan              String  @default("free")
+  billingCycleStart Int?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  users      WorkspaceUser[]
+  invites    WorkspaceInvite[]
+  sentEmails SentEmail[]
+
+  domains Domain[]
+  sites   Site[]
+  pages   Page[]
+}
+
+// Sent email model
+model SentEmail {
+  id          String @id @default(cuid())
+  userId      String
+  workspaceId String
+
+  type EmailType
+
+  createdAt DateTime @default(now())
+
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([workspaceId])
+}
+
+// Workspace invite model
+model WorkspaceInvite {
+  id          String @id @default(cuid())
+  workspaceId String
+
+  email String
+
+  expires   DateTime
+  createdAt DateTime @default(now())
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+
+  @@unique([email, workspaceId])
+  @@index([workspaceId])
+}
+
+// Workspace user model
+model WorkspaceUser {
+  userId      String
+  workspaceId String
+
+  role WorkspaceRole @default(MEMBER)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+
+  @@id([userId, workspaceId])
+  @@index([userId])
+  @@index([workspaceId])
+}
+
+// Domain model
+model Domain {
+  id   String @id @default(cuid())
+  slug String @unique
+
+  clicks   Int     @default(0)
+  primary  Boolean @default(false) // Indicates if the domain is the primary domain for the workspace
+  verified Boolean @default(false) // Indicates if the domain is verified
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  lastChecked DateTime @default(now())
+
+  // Relations
+  workspace   Workspace? @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  workspaceId String?
+
+  sites Site[]
+  pages Page[]
+
+  @@index(workspaceId)
+  @@index(lastChecked)
+}
+
+model Page {
+  id               String           @id @default(cuid())
+  type             PageType         @default(custom) // Represents the type of the page
+  relationType     PageRelationType @default(standalone) // Represents the type of the page relation
+  domain           String? // The associated domain for the page
+  sanityDocumentId String?          @unique // Represents the unique ID of the page in Sanity
+  published        Boolean          @default(false) // Indicates if the page is published
+  slug             String           @default(cuid())
+  title            String?
+  description      String?
+  content          String?
+  image            String?          @db.LongText // Represents the image of the page
+  imageBlurhash    String?          @db.VarChar(64) // Represents the blurhash of the page image
+  createdAt        DateTime         @default(now())
+  updatedAt        DateTime         @updatedAt
+  // Relations
+  workspace        Workspace?       @relation(fields: [workspaceId], references: [id], onUpdate: Cascade, onDelete: Cascade)
+  workspaceId      String?
+
+  // Relational reference to the funnel domain
+  site   Site?   @relation(fields: [siteId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  siteId String?
+
+  // Relational reference to the funnel domain
+  siteDomain     Domain? @relation(fields: [siteDomainSlug], references: [slug], onUpdate: Cascade, onDelete: Cascade)
+  siteDomainSlug String?
+
+  @@index([workspaceId])
+  @@index([siteId])
+  @@index([siteDomainSlug])
+  @@index(createdAt(sort: Desc))
+}
+
+model Site {
+  id            String   @id @default(cuid())
+  name          String?
+  domain        String?  @unique
+  key           String? // Instead of using "slug", since it's used in the workspace we use "key" instead to avoid confusion
+  archived      Boolean  @default(false) // Indicates if the funnel is archived
+  description   String?  @db.Text
+  logo          String?
+  font          String   @default("font-cal")
+  image         String?  @db.LongText // Represents the image of the funnel
+  imageBlurhash String?  @db.VarChar(64) // Represents the blurhash of the funnel image
+  message404    String?
+  subdomain     String?  @unique
+  customDomain  String?  @unique
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  // Relations
+  workspace       Workspace? @relation(fields: [workspaceId], references: [id], onUpdate: Cascade, onDelete: Cascade)
+  workspaceId     String?
+  // Relational reference to the workspace domain
+  workspaceDomain Domain?    @relation(fields: [domain], references: [slug], onUpdate: Cascade, onDelete: Cascade)
+
+  pages  Page[]
+  User   User?   @relation(fields: [userId], references: [id])
+  userId String?
+
+  @@unique([domain, key])
+  @@unique(key)
+  @@index([domain])
+  @@index([workspaceId])
+  @@index(createdAt(sort: Desc))
+  @@index([userId])
+}
+
+// ----------------------------------------------------------------------- //
+model Example {
+  id            Int     @id @default(autoincrement())
+  name          String?
+  description   String? @db.Text
+  domainCount   Int?
+  url           String?
+  image         String? @db.Text
+  imageBlurhash String? @db.Text
+}
+
+// // Site model
+// model Site {
+//   id       String  @id @default(cuid())
+//   domain   String
+//   key      String? // Instead of using "slug", since it's used in the workspace we use "key" instead to avoid confusion
+//   rootPath String? // Represents the root path of the funnel on its associated domain
+
+//   published Boolean @default(false) // Indicates if the funnel is published
+//   archived  Boolean @default(false) // Indicates if the funnel is archived
+
+//   title         String
+//   description   String?
+//   logo          String?
+//   font          String? @default("Inter")
+//   image         String? @db.LongText // Represents the image of the funnel
+//   imageBlurhash String? @db.VarChar(64) // Represents the blurhash of the funnel image
+//   message404    String?
+//   clicks        Int     @default(0)
+//   publicStats   Boolean @default(false) // whether to show public stats or not
+
+//   createdAt DateTime @default(now())
+//   updatedAt DateTime @updatedAt
+
+//   // Relations
+//   workspace       Workspace? @relation(fields: [workspaceId], references: [id], onUpdate: Cascade, onDelete: Cascade)
+//   workspaceId     String?
+//   // Relational reference to the workspace domain
+//   workspaceDomain Domain?    @relation(fields: [domain], references: [slug], onUpdate: Cascade, onDelete: Cascade)
+
+//   pages  Page[]
+//   User   User?   @relation(fields: [userId], references: [id])
+//   userId String?
+
+//   @@unique([domain, key])
+//   @@unique(key)
+//   @@index([domain])
+//   @@index([workspaceId])
+//   @@index(createdAt(sort: Desc))
+//   @@index([userId])
+// }
+
+// model Page {
+//   id               String           @id @default(cuid())
+//   type             PageType         @default(custom) // Represents the type of the page
+//   relationType     PageRelationType @default(standalone) // Represents the type of the page relation
+//   domain           String? // The associated domain for the page
+//   sanityDocumentId String?          @unique // Represents the unique ID of the page in Sanity
+
+//   slug     String? @unique // Represents the slug of the page
+//   rootPath String? // Represents the root path of the page on its associated domain
+
+//   published Boolean @default(false) // Indicates if the page is published
+//   archived  Boolean @default(false) // Indicates if the page is archived
+
+//   title         String?
+//   description   String?
+//   content       String?
+//   image         String? @db.LongText // Represents the image of the page
+//   imageBlurhash String? @db.VarChar(64) // Represents the blurhash of the page image
+
+//   createdAt DateTime @default(now())
+//   updatedAt DateTime @updatedAt
+
+//   // Relations
+//   workspace   Workspace? @relation(fields: [workspaceId], references: [id], onUpdate: Cascade, onDelete: Cascade)
+//   workspaceId String?
+
+//   // Relational reference to the funnel domain
+//   funnel   Funnel? @relation(fields: [funnelId], references: [id])
+//   funnelId String?
+
+//   // Relational reference to the funnel domain
+//   funnelDomain     Domain? @relation(fields: [funnelDomainSlug], references: [slug], onUpdate: Cascade, onDelete: Cascade)
+//   funnelDomainSlug String?
+
+//   tag   Tag?    @relation(fields: [tagId], references: [id])
+//   tagId String?
+
+//   @@index([workspaceId])
+//   @@index([funnelId])
+//   @@index([funnelDomainSlug])
+//   @@index(tagId)
+//   @@index(createdAt(sort: Desc))
+// }

@@ -1,0 +1,9 @@
+{
+	"id": "6Lfit1FoU2WBXpL",
+	"json": "{\"id\":\"6Lfit1FoU2WBXpL\",\"url\":\"https://platform.openai.com/docs/guides/text-generation/chat-completions-vs-completions\",\"loadedUrl\":\"https://platform.openai.com/docs/guides/text-generation/chat-completions-vs-completions\",\"uniqueKey\":\"https://platform.openai.com/docs/guides/text-generation/chat-completions-vs-completions\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"skipNavigation\":false,\"state\":4}},\"handledAt\":\"2023-11-30T11:31:55.197Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://platform.openai.com/docs/guides/text-generation/chat-completions-vs-completions",
+	"url": "https://platform.openai.com/docs/guides/text-generation/chat-completions-vs-completions"
+}

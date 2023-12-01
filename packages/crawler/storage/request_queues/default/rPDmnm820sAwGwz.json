@@ -1,0 +1,9 @@
+{
+	"id": "rPDmnm820sAwGwz",
+	"json": "{\"id\":\"rPDmnm820sAwGwz\",\"url\":\"https://platform.openai.com/docs/changelog/deprecated-chat-completions-functions\",\"loadedUrl\":\"https://platform.openai.com/docs/changelog/deprecated-chat-completions-functions\",\"uniqueKey\":\"https://platform.openai.com/docs/changelog/deprecated-chat-completions-functions\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"skipNavigation\":false,\"state\":4}},\"handledAt\":\"2023-11-30T11:32:04.573Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://platform.openai.com/docs/changelog/deprecated-chat-completions-functions",
+	"url": "https://platform.openai.com/docs/changelog/deprecated-chat-completions-functions"
+}

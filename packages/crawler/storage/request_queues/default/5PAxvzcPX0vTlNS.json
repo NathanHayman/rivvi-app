@@ -1,0 +1,9 @@
+{
+	"id": "5PAxvzcPX0vTlNS",
+	"json": "{\"id\":\"5PAxvzcPX0vTlNS\",\"url\":\"https://platform.openai.com/docs/tutorials\",\"uniqueKey\":\"https://platform.openai.com/docs/tutorials\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":1,\"errorMessages\":[\"Error: Request blocked - received 403 status code.\\n    at PlaywrightCrawler._throwOnBlockedRequest (/Users/nathanhayman/Desktop/Dev/rivvi/node_modules/.pnpm/@crawlee+basic@3.6.2/node_modules/@crawlee/basic/internals/basic-crawler.js:688:19)\\n    at PlaywrightCrawler._responseHandler (/Users/nathanhayman/Desktop/Dev/rivvi/node_modules/.pnpm/@crawlee+browser@3.6.2_playwright@1.40.1/node_modules/@crawlee/browser/internals/browser-crawler.js:352:22)\\n    at PlaywrightCrawler._runRequestHandler (/Users/nathanhayman/Desktop/Dev/rivvi/node_modules/.pnpm/@crawlee+browser@3.6.2_playwright@1.40.1/node_modules/@crawlee/browser/internals/browser-crawler.js:238:24)\\n    at runNextTicks (node:internal/process/task_queues:60:5)\\n    at process.processImmediate (node:internal/timers:449:9)\\n    at process.callbackTrampoline (node:internal/async_hooks:130:17)\\n    at async PlaywrightCrawler._runRequestHandler (/Users/nathanhayman/Desktop/Dev/rivvi/node_modules/.pnpm/@crawlee+playwright@3.6.2_playwright@1.40.1/node_modules/@crawlee/playwright/internals/playwright-crawler.js:109:9)\\n    at async wrap (/Users/nathanhayman/Desktop/Dev/rivvi/node_modules/.pnpm/@apify+timeout@0.3.0/node_modules/@apify/timeout/index.js:52:21)\"],\"headers\":{},\"userData\":{\"__crawlee\":{\"skipNavigation\":false,\"state\":5}}}",
+	"method": "GET",
+	"orderNo": 1701343901477,
+	"retryCount": 1,
+	"uniqueKey": "https://platform.openai.com/docs/tutorials",
+	"url": "https://platform.openai.com/docs/tutorials"
+}

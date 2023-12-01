@@ -1,0 +1,9 @@
+{
+	"id": "e6LTpOjb0DL0yzS",
+	"json": "{\"id\":\"e6LTpOjb0DL0yzS\",\"url\":\"https://platform.openai.com/docs/guides/embeddings/blindness-to-recent-events\",\"uniqueKey\":\"https://platform.openai.com/docs/guides/embeddings/blindness-to-recent-events\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"skipNavigation\":false}}}",
+	"method": "GET",
+	"orderNo": 1701343905144,
+	"retryCount": 0,
+	"uniqueKey": "https://platform.openai.com/docs/guides/embeddings/blindness-to-recent-events",
+	"url": "https://platform.openai.com/docs/guides/embeddings/blindness-to-recent-events"
+}

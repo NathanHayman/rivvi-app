@@ -1,0 +1,518 @@
+[
+    {
+      "text": "About Us",
+      "link": "about.php"
+    },
+    {
+      "text": "Contact Us",
+      "link": "contact-us.php"
+    },
+    {
+      "text": "Our Staff",
+      "link": "staff.php"
+    },
+    {
+      "text": "Site Map",
+      "link": "sitemap.php"
+    },
+    {
+      "text": "Locations",
+      "link": "locations.php"
+    },
+    {
+      "text": "Tampa Office Location",
+      "link": "tampa-cardiothoracic-office.php"
+    },
+    {
+      "text": "Home Page",
+      "link": "index.php"
+    },
+    {
+      "text": "Surgical Services",
+      "link": "services.php"
+    },
+    {
+      "text": "Surgical Innovations",
+      "link": "surgical-innovations.php"
+    },
+    {
+      "text": "Thoracic Surgery",
+      "link": "thoracic-services.php"
+    },
+    {
+      "text": "Areas of Special Expertise",
+      "link": "areas-of-special-expertise.php"
+    },
+    {
+      "text": "Pulmonary Artery Sarcomas",
+      "link": "pulmonary-artery-sarcomas.php"
+    },
+    {
+      "text": "Intra-thoracic Parathyroid Adenoma",
+      "link": "intra-thoracic-pa.php"
+    },
+    {
+      "text": "Esophageal Cancer Surgery",
+      "link": "esophageal-cancer-surgery.php"
+    },
+    {
+      "text": "Lung Cancer Surgery",
+      "link": "lung-cancer-surgery.php"
+    },
+    {
+      "text": "Thymectomy",
+      "link": "thymectomy.php"
+    },
+    {
+      "text": "Pancoast tumors",
+      "link": "pancoast-tumors.php"
+    },
+    {
+      "text": "Bronchopleural fistula",
+      "link": "bronchopleural-fistula.php"
+    },
+    {
+      "text": "Tracheoesophageal fistula",
+      "link": "tracheoesophageal-fistula.php"
+    },
+    {
+      "text": "Mediastinal masses",
+      "link": "mediastinal-masses.php"
+    },
+    {
+      "text": "Thoracic outlet syndrome",
+      "link": "thoracic-outlet-syndrome.php"
+    },
+    {
+      "text": "Malignant Pleural Mesothelioma",
+      "link": "malignant-pleural-mesothelioma.php"
+    },
+    {
+      "text": "Tracheal Resection",
+      "link": "tracheal-resection.php"
+    },
+    {
+      "text": "In the News",
+      "link": "news.php"
+    },
+    {
+      "text": "K. Eric Sommers, M.D., FACS",
+      "link": "dr-k-eric-sommers.php"
+    },
+    {
+      "text": "Privacy Statement",
+      "link": "privacy.php"
+    },
+    {
+      "text": "Forms",
+      "link": "forms.php"
+    },
+    {
+      "text": "Thank You",
+      "link": "contactus-thankyou.php"
+    },
+    {
+      "text": "Review of Thoracic Surgical Oncology",
+      "link": "review.php"
+    },
+    {
+      "text": "Understanding Cancer",
+      "link": "understanding-cancer.php"
+    },
+    {
+      "text": "Contact Us",
+      "link": "contact.php"
+    },
+    {
+      "text": "Vascular Treatments",
+      "link": "services.php"
+    },
+    {
+      "text": "Vascular Conditions",
+      "link": "vascular-diseases.php"
+    },
+    {
+      "text": "Patient Center",
+      "link": "patient-center.php"
+    },
+    {
+      "text": "Home Page",
+      "link": "index.php"
+    },
+    {
+      "text": "Surgical Therapies",
+      "link": "surgical-therapies.php"
+    },
+    {
+      "text": "Endovascular Therapies",
+      "link": "endovascular-therapies.php"
+    },
+    {
+      "text": "Physicians",
+      "link": "physicians.php"
+    },
+    {
+      "text": "Carney Chan, M.D.",
+      "link": "dr-carney-chan.php"
+    },
+    {
+      "text": "Trung D. Bui, M.D., DABS, FACS",
+      "link": "dr-trung-bui.php"
+    },
+    {
+      "text": "Our Location",
+      "link": "locations.php"
+    },
+    {
+      "text": "Sitemap",
+      "link": "sitemap.php"
+    },
+    {
+      "text": "Patient Portal Login",
+      "link": "patient-portal.php"
+    },
+    {
+      "text": "Home",
+      "link": "index.php"
+    },
+    {
+      "text": "Contact Us",
+      "link": "contact-us.php"
+    },
+    {
+      "text": "Office Location",
+      "link": "locations.php"
+    },
+    {
+      "text": "Physicians",
+      "link": "physicians.php"
+    },
+    {
+      "text": "Sairus Faruque, M.D., MPH",
+      "link": "dr-sairus-faruque.php"
+    },
+    {
+      "text": "Gregg M. Koval, M.D.",
+      "link": "dr-gregg-koval.php"
+    },
+    {
+      "text": "Amatu Rabbi, M.D.",
+      "link": "dr-amatu-rabbi.php"
+    },
+    {
+      "text": "Meenal Lothe, M.D.",
+      "link": "dr-meenal-lothe.php"
+    },
+    {
+      "text": "Internal Medicine",
+      "link": "internal-medicine.php"
+    },
+    {
+      "text": "Diabetes",
+      "link": "diabetes.php"
+    },
+    {
+      "text": "Insurance",
+      "link": "insurance.php"
+    },
+    {
+      "text": "Patient Forms",
+      "link": "patient-forms.php"
+    },
+    {
+      "text": "Frequently Asked Questions",
+      "link": "faq.php"
+    },
+    {
+      "text": "Related Links",
+      "link": "related-links.php"
+    },
+    {
+      "text": "Policies",
+      "link": "office-policies.php"
+    },
+    {
+      "text": "News",
+      "link": "news.php"
+    },
+    {
+      "text": "Your Patient Portal",
+      "link": "patient-portal.php"
+    },
+    {
+      "text": "Online Bill Pay",
+      "link": "online-billpay.php"
+    },
+    {
+      "text": "Sitemap",
+      "link": "sitemap.php"
+    },
+    {
+      "text": "About Delta Pediatrics",
+      "link": "about-us.php"
+    },
+    {
+      "text": "Contact Us",
+      "link": "contact-us.php"
+    },
+    {
+      "text": "Emmanuel E Mordi, MD, FAAP",
+      "link": "dr-mordi.php"
+    },
+    {
+      "text": "Patient Center",
+      "link": "patient-center.php"
+    },
+    {
+      "text": "Buford / Dacula Pediatric Office",
+      "link": "dacula-buford-pediatrician-office.php"
+    },
+    {
+      "text": "Home Page",
+      "link": "index.php"
+    },
+    {
+      "text": "Appointment Policy",
+      "link": "appointment-policy.php"
+    },
+    {
+      "text": "Frequently Asked Questions",
+      "link": "faqs.php"
+    },
+    {
+      "text": "Privacy",
+      "link": "privacy.php"
+    },
+    {
+      "text": "Our Services",
+      "link": "medical-services.php"
+    },
+    {
+      "text": "Insurance Plans",
+      "link": "insurance.php"
+    },
+    {
+      "text": "News Topic",
+      "link": "news-topic.php"
+    },
+    {
+      "text": "News",
+      "link": "news.php"
+    },
+    {
+      "text": "Sitemap",
+      "link": "sitemap.php"
+    },
+    {
+      "text": "Useful Links",
+      "link": "useful-links.php"
+    },
+    {
+      "text": "About Us",
+      "link": "about-us.php"
+    },
+    {
+      "text": "Contact Us",
+      "link": "contact-us.php"
+    },
+    {
+      "text": "Practice Newsletters",
+      "link": "practice-newsletters.php"
+    },
+    {
+      "text": "Patient Center",
+      "link": "patient-center.php"
+    },
+    {
+      "text": "Livonia Office",
+      "link": "livonia-location.php"
+    },
+    {
+      "text": "News",
+      "link": "news.php"
+    },
+    {
+      "text": "News Topic",
+      "link": "news-topic.php"
+    },
+    {
+      "text": "Search",
+      "link": "search.php"
+    },
+    {
+      "text": "Home Page",
+      "link": "index.php"
+    },
+    {
+      "text": "Vision Care Providers",
+      "link": "physicians.php"
+    },
+    {
+      "text": "Alan W. Solway, M.D.",
+      "link": "dr-alan-solway.php"
+    },
+    {
+      "text": "Christopher Papp, M.D.",
+      "link": "dr-christopher-papp.php"
+    },
+    {
+      "text": "Ophthalmology Services",
+      "link": "ophthalmology-services.php"
+    },
+    {
+      "text": "Privacy Policy",
+      "link": "privacy.php"
+    },
+    {
+      "text": "Sitemap",
+      "link": "sitemap.php"
+    },
+    {
+      "text": "Contact Us",
+      "link": "contact-us.php"
+    },
+    {
+      "text": "Karen A. Moore, MD, FAAP",
+      "link": "dr-karen-moore.php"
+    },
+    {
+      "text": "Alice E. Wilson, MD, FAAP",
+      "link": "dr-alice-wilson.php"
+    },
+    {
+      "text": "LaKimberly N. Price, MD, FAAP",
+      "link": "dr-lakimberly-price.php"
+    },
+    {
+      "text": "Parent Center",
+      "link": "patient-center.php"
+    },
+    {
+      "text": "Virtual Office Visits",
+      "link": "virtual-visits.php"
+    },
+    {
+      "text": "Office Policies",
+      "link": "office-policies.php"
+    },
+    {
+      "text": "Teen Center",
+      "link": "teen-center.php"
+    },
+    {
+      "text": "Our Office",
+      "link": "location.php"
+    },
+    {
+      "text": "Thank You",
+      "link": "thank-you.php"
+    },
+    {
+      "text": "Sitemap",
+      "link": "sitemap.php"
+    },
+    {
+      "text": "News Topic",
+      "link": "news-topic.php"
+    },
+    {
+      "text": "Welcome",
+      "link": "index.php"
+    },
+    {
+      "text": "Meet Our Providers",
+      "link": "physicians.php"
+    },
+    {
+      "text": "Wendy Davison, CPNP",
+      "link": "wendy-davison.php"
+    },
+    {
+      "text": "Tory M. Banks, CFNP",
+      "link": "tory-banks-fnp.php"
+    },
+    {
+      "text": "Qadara Beyah, CPNP",
+      "link": "qadara-beyah.php"
+    },
+    {
+      "text": "Yxari Garza, CPNP",
+      "link": "yxari-garza.php"
+    },
+    {
+      "text": "Pediatric Services",
+      "link": "medical-services.php"
+    },
+    {
+      "text": "Immunizations",
+      "link": "immunizations.php"
+    },
+    {
+      "text": "Immunization Catch-Up",
+      "link": "immunization-catch-up.php"
+    },
+    {
+      "text": "Insurance",
+      "link": "insurance.php"
+    },
+    {
+      "text": "Coronavirus aka COVID-19",
+      "link": "coronavirus-covid-19.php"
+    },
+    {
+      "text": "Medicaid and WIC",
+      "link": "wic-medicaid.php"
+    },
+    {
+      "text": "Patient Forms",
+      "link": "patient-forms.php"
+    },
+    {
+      "text": "Patient Portal",
+      "link": "patient-portal.php"
+    },
+    {
+      "text": "Online Bill Payment",
+      "link": "bill-payment.php"
+    },
+    {
+      "text": "Patient Education",
+      "link": "patient-education.php"
+    },
+    {
+      "text": "Childhood Obesity",
+      "link": "childhood-obesity.php"
+    },
+    {
+      "text": "Safety Information",
+      "link": "safety-information.php"
+    },
+    {
+      "text": "Attention Deficit Disorder",
+      "link": "attention-deficit-disorder.php"
+    },
+    {
+      "text": "Asthma Management",
+      "link": "asthma-allergies.php"
+    },
+    {
+      "text": "Social Media and Your Child",
+      "link": "social-media.php"
+    },
+    {
+      "text": "Is it an Emergency?",
+      "link": "urgent-care-emergency.php"
+    },
+    {
+      "text": "Breast Feeding & Lactation",
+      "link": "breastfeeding.php"
+    },
+    {
+      "text": "News",
+      "link": "news.php"
+    },
+    {
+      "text": "Privacy",
+      "link": "privacy.php"
+    }
+  ]

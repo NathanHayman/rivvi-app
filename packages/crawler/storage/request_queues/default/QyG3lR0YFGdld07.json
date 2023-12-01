@@ -1,0 +1,9 @@
+{
+	"id": "QyG3lR0YFGdld07",
+	"json": "{\"id\":\"QyG3lR0YFGdld07\",\"url\":\"https://platform.openai.com/docs/guides/function-calling/introduction\",\"uniqueKey\":\"https://platform.openai.com/docs/guides/function-calling/introduction\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"skipNavigation\":false}}}",
+	"method": "GET",
+	"orderNo": 1701343905117,
+	"retryCount": 0,
+	"uniqueKey": "https://platform.openai.com/docs/guides/function-calling/introduction",
+	"url": "https://platform.openai.com/docs/guides/function-calling/introduction"
+}

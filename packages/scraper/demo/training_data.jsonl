@@ -1,0 +1,90 @@
+{"text":"About Us","link":"about.php","label":"about"}
+{"text":"Contact Us","link":"contact-us.php","label":"conact"}
+{"text":"Our Staff","link":"staff.php","label":"members"}
+{"text":"Site Map","link":"sitemap.php","label":"sitemap"}
+{"text":"Locations","link":"locations.php","label":"locations"}
+{"text":"Tampa Office Location","link":"tampa-cardiothoracic-office.php","label":"nested_locations"}
+{"text":"Home Page","link":"index.php","label":"home"}
+{"text":"Surgical Services","link":"services.php","label":"services"}
+{"text":"Surgical Innovations","link":"surgical-innovations.php","label":"nested_services"}
+{"text":"Thoracic Surgery","link":"thoracic-services.php","label":"nested_services"}
+{"text":"Areas of Special Expertise","link":"areas-of-special-expertise.php","label":"nested_services"}
+{"text":"Pulmonary Artery Sarcomas","link":"pulmonary-artery-sarcomas.php","label":"nested_services"}
+{"text":"Intra-thoracic Parathyroid Adenoma","link":"intra-thoracic-pa.php","label":"nested_services"}
+{"text":"Esophageal Cancer Surgery","link":"esophageal-cancer-surgery.php","label":"nested_services"}
+{"text":"Lung Cancer Surgery","link":"lung-cancer-surgery.php","label":"nested_services"}
+{"text":"Thymectomy","link":"thymectomy.php","label":"nested_services"}
+{"text":"Pancoast tumors","link":"pancoast-tumors.php","label":"nested_services"}
+{"text":"Bronchopleural fistula","link":"bronchopleural-fistula.php","label":"nested_services"}
+{"text":"Tracheoesophageal fistula","link":"tracheoesophageal-fistula.php","label":"nested_services"}
+{"text":"Mediastinal masses","link":"mediastinal-masses.php","label":"nested_services"}
+{"text":"Thoracic outlet syndrome","link":"thoracic-outlet-syndrome.php","label":"nested_services"}
+{"text":"Malignant Pleural Mesothelioma","link":"malignant-pleural-mesothelioma.php","label":"nested_services"}
+{"text":"Tracheal Resection","link":"tracheal-resection.php","label":"nested_services"}
+{"text":"In the News","link":"news.php","label":"news"}
+{"text":"K. Eric Sommers, M.D., FACS","link":"dr-k-eric-sommers.php","label":"nested_members"}
+{"text":"Privacy Statement","link":"privacy.php","label":"privacy"}
+{"text":"Forms","link":"forms.php","label":"patient-forms"}
+{"text":"Thank You","link":"contactus-thankyou.php","label":"doesnt_matter"}
+{"text":"Review of Thoracic Surgical Oncology","link":"review.php","label":"other"}
+{"text":"Understanding Cancer","link":"understanding-cancer.php","label":"nested_news"}
+{"text":"Contact Us","link":"contact.php","label":"contact"}
+{"text":"Vascular Treatments","link":"services.php","label":"services"}
+{"text":"Vascular Conditions","link":"vascular-diseases.php","label":"nested_services"}
+{"text":"Patient Center","link":"patient-center.php","label":"patient-center"}
+{"text":"Home Page","link":"index.php","label":"home"}
+{"text":"Surgical Therapies","link":"surgical-therapies.php","label":"nested_services"}
+{"text":"Endovascular Therapies","link":"endovascular-therapies.php","label":"nested_services"}
+{"text":"Physicians","link":"physicians.php","label":"members"}
+{"text":"Carney Chan, M.D.","link":"dr-carney-chan.php","label":"nested_members"}
+{"text":"Trung D. Bui, M.D., DABS, FACS","link":"dr-trung-bui.php","label":"nested_members"}
+{"text":"Our Location","link":"locations.php","label":"locations"}
+{"text":"Sitemap","link":"sitemap.php","label":"sitemap"}
+{"text":"Patient Portal Login","link":"patient-portal.php","label":"other"}
+{"text":"Home","link":"index.php","label":"home"}
+{"text":"Contact Us","link":"contact-us.php","label":"conact"}
+{"text":"Office Location","link":"locations.php","label":"locations"}
+{"text":"Physicians","link":"physicians.php","label":"members"}
+{"text":"Sairus Faruque, M.D., MPH","link":"dr-sairus-faruque.php","label":"nested_members"}
+{"text":"Gregg M. Koval, M.D.","link":"dr-gregg-koval.php","label":"nested_members"}
+{"text":"Amatu Rabbi, M.D.","link":"dr-amatu-rabbi.php","label":"nested_members"}
+{"text":"Meenal Lothe, M.D.","link":"dr-meenal-lothe.php","label":"nested_members"}
+{"text":"Internal Medicine","link":"internal-medicine.php","label":"services"}
+{"text":"Diabetes","link":"diabetes.php","label":"nested_services"}
+{"text":"Insurance","link":"insurance.php","label":"insurances"}
+{"text":"Patient Forms","link":"patient-forms.php","label":"patient-forms"}
+{"text":"Frequently Asked Questions","link":"faq.php","label":"faq"}
+{"text":"Related Links","link":"related-links.php","label":"other"}
+{"text":"Policies","link":"office-policies.php","label":"policies"}
+{"text":"News","link":"news.php","label":"news"}
+{"text":"Your Patient Portal","link":"patient-portal.php","label":"other"}
+{"text":"Online Bill Pay","link":"online-billpay.php","label":"bill-pay"}
+{"text":"Sitemap","link":"sitemap.php","label":"sitemap"}
+{"text":"About Delta Pediatrics","link":"about-us.php","label":"about"}
+{"text":"Contact Us","link":"contact-us.php","label":"conact"}
+{"text":"Emmanuel E Mordi, MD, FAAP","link":"dr-mordi.php","label":"nested_members"}
+{"text":"Patient Center","link":"patient-center.php","label":"patient-center"}
+{"text":"Buford / Dacula Pediatric Office","link":"dacula-buford-pediatrician-office.php","label":"nested_locations"}
+{"text":"Home Page","link":"index.php","label":"home"}
+{"text":"Appointment Policy","link":"appointment-policy.php","label":"policies"}
+{"text":"Frequently Asked Questions","link":"faqs.php","label":"faq"}
+{"text":"Privacy","link":"privacy.php","label":"privacy"}
+{"text":"Our Services","link":"medical-services.php","label":"services"}
+{"text":"Insurance Plans","link":"insurance.php","label":"insurances"}
+{"text":"News Topic","link":"news-topic.php","label":"nested_new"}
+{"text":"News","link":"news.php","label":"news"}
+{"text":"Sitemap","link":"sitemap.php","label":"sitemap"}
+{"text":"Useful Links","link":"useful-links.php","label":"other"}
+{"text":"About Us","link":"about-us.php","label":"about"}
+{"text":"Contact Us","link":"contact-us.php","label":"conact"}
+{"text":"Practice Newsletters","link":"practice-newsletters.php","label":"other"}
+{"text":"Patient Center","link":"patient-center.php","label":"patient-center"}
+{"text":"Livonia Office","link":"livonia-location.php","label":"nested_locations"}
+{"text":"News","link":"news.php","label":"news"}
+{"text":"News Topic","link":"news-topic.php","label":"nested_new"}
+{"text":"Search","link":"search.php","label":"doesnt_matter"}
+{"text":"Home Page","link":"index.php","label":"home"}
+{"text":"Vision Care Providers","link":"physicians.php","label":"members"}
+{"text":"Alan W. Solway, M.D.","link":"dr-alan-solway.php","label":"nested_members"}
+{"text":"Christopher Papp, M.D.","link":"dr-christopher-papp.php","label":"nested_members"}
+{"text":"Ophthalmology Services","link":"ophthalmology-services.php","label":"nested_services"}

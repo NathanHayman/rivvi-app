@@ -1,0 +1,9 @@
+{
+	"id": "o7woPTQyeRgXJcR",
+	"json": "{\"id\":\"o7woPTQyeRgXJcR\",\"url\":\"https://platform.openai.com/docs/guides/function-calling/parallel-function-calling\",\"uniqueKey\":\"https://platform.openai.com/docs/guides/function-calling/parallel-function-calling\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"skipNavigation\":false}}}",
+	"method": "GET",
+	"orderNo": 1701343905120,
+	"retryCount": 0,
+	"uniqueKey": "https://platform.openai.com/docs/guides/function-calling/parallel-function-calling",
+	"url": "https://platform.openai.com/docs/guides/function-calling/parallel-function-calling"
+}

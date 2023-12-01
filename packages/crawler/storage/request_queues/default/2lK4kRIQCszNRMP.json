@@ -1,0 +1,9 @@
+{
+	"id": "2lK4kRIQCszNRMP",
+	"json": "{\"id\":\"2lK4kRIQCszNRMP\",\"url\":\"https://platform.openai.com/docs/guides/text-generation/parameter-details\",\"loadedUrl\":\"https://platform.openai.com/docs/guides/text-generation/parameter-details\",\"uniqueKey\":\"https://platform.openai.com/docs/guides/text-generation/parameter-details\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"skipNavigation\":false,\"state\":4}},\"handledAt\":\"2023-11-30T11:31:53.752Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://platform.openai.com/docs/guides/text-generation/parameter-details",
+	"url": "https://platform.openai.com/docs/guides/text-generation/parameter-details"
+}

@@ -1,0 +1,9 @@
+{
+	"id": "FfNMbWyPbcx2KLJ",
+	"json": "{\"id\":\"FfNMbWyPbcx2KLJ\",\"url\":\"https://platform.openai.com/docs/guides/production-best-practices/batching\",\"uniqueKey\":\"https://platform.openai.com/docs/guides/production-best-practices/batching\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"skipNavigation\":false}}}",
+	"method": "GET",
+	"orderNo": 1701343910014,
+	"retryCount": 0,
+	"uniqueKey": "https://platform.openai.com/docs/guides/production-best-practices/batching",
+	"url": "https://platform.openai.com/docs/guides/production-best-practices/batching"
+}

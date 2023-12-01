@@ -1,0 +1,39 @@
+{"text":"Privacy Policy","link":"privacy.php","label":"privacy"}
+{"text":"Sitemap","link":"sitemap.php","label":"sitemap"}
+{"text":"Contact Us","link":"contact-us.php","label":"conact"}
+{"text":"Karen A. Moore, MD, FAAP","link":"dr-karen-moore.php","label":"nested_members"}
+{"text":"Alice E. Wilson, MD, FAAP","link":"dr-alice-wilson.php","label":"nested_members"}
+{"text":"LaKimberly N. Price, MD, FAAP","link":"dr-lakimberly-price.php","label":"nested_members"}
+{"text":"Parent Center","link":"patient-center.php","label":"patient-center"}
+{"text":"Virtual Office Visits","link":"virtual-visits.php","label":"other"}
+{"text":"Office Policies","link":"office-policies.php","label":"policies"}
+{"text":"Teen Center","link":"teen-center.php","label":"other"}
+{"text":"Our Office","link":"location.php","label":"single_location"}
+{"text":"Thank You","link":"thank-you.php","label":"doesnt_matter"}
+{"text":"Sitemap","link":"sitemap.php","label":"sitemap"}
+{"text":"News Topic","link":"news-topic.php","label":"nested_new"}
+{"text":"Welcome","link":"index.php","label":"home"}
+{"text":"Meet Our Providers","link":"physicians.php","label":"members"}
+{"text":"Wendy Davison, CPNP","link":"wendy-davison.php","label":"nested_members"}
+{"text":"Tory M. Banks, CFNP","link":"tory-banks-fnp.php","label":"nested_members"}
+{"text":"Qadara Beyah, CPNP","link":"qadara-beyah.php","label":"nested_members"}
+{"text":"Yxari Garza, CPNP","link":"yxari-garza.php","label":"nested_members"}
+{"text":"Pediatric Services","link":"medical-services.php","label":"services"}
+{"text":"Immunizations","link":"immunizations.php","label":"nested_services"}
+{"text":"Immunization Catch-Up","link":"immunization-catch-up.php","label":"nested_services"}
+{"text":"Insurance","link":"insurance.php","label":"insurances"}
+{"text":"Coronavirus aka COVID-19","link":"coronavirus-covid-19.php","label":"other"}
+{"text":"Medicaid and WIC","link":"wic-medicaid.php","label":"other"}
+{"text":"Patient Forms","link":"patient-forms.php","label":"patient-forms"}
+{"text":"Patient Portal","link":"patient-portal.php","label":"other"}
+{"text":"Online Bill Payment","link":"bill-payment.php","label":"other"}
+{"text":"Patient Education","link":"patient-education.php","label":"patient-education"}
+{"text":"Childhood Obesity","link":"childhood-obesity.php","label":"other"}
+{"text":"Safety Information","link":"safety-information.php","label":"other"}
+{"text":"Attention Deficit Disorder","link":"attention-deficit-disorder.php","label":"nested_services"}
+{"text":"Asthma Management","link":"asthma-allergies.php","label":"nested_services"}
+{"text":"Social Media and Your Child","link":"social-media.php","label":"nested_news"}
+{"text":"Is it an Emergency?","link":"urgent-care-emergency.php","label":"other"}
+{"text":"Breast Feeding & Lactation","link":"breastfeeding.php","label":"nested_news"}
+{"text":"News","link":"news.php","label":"news"}
+{"text":"Privacy","link":"privacy.php","label":"privacy"}

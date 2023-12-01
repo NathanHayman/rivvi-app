@@ -1,0 +1,106 @@
+"use client";
+
+import * as Dialog from "@radix-ui/react-dialog";
+import { useRouter } from "next/navigation";
+import { Dispatch, SetStateAction } from "react";
+import { Drawer } from "vaul";
+
+import { cn } from "@phunq/utils";
+
+import { useMediaQuery } from "./hooks";
+
+export function Modal({
+  children,
+  className,
+  dialogOnly,
+  showModal,
+  setShowModal,
+  onClose,
+  preventDefaultClose,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  dialogOnly?: boolean;
+  showModal?: boolean;
+  setShowModal?: Dispatch<SetStateAction<boolean>>;
+  onClose?: () => void;
+  preventDefaultClose?: boolean;
+}) {
+  const router = useRouter();
+
+  const closeModal = ({ dragged }: { dragged?: boolean } = {}) => {
+    if (preventDefaultClose && !dragged) {
+      return;
+    }
+    // fire onClose event if provided
+    onClose && onClose();
+
+    // if setShowModal is defined, use it to close modal
+    if (setShowModal) {
+      setShowModal(false);
+      // else, this is intercepting route @modal
+    } else {
+      router.back();
+    }
+  };
+  const { isMobile } = useMediaQuery();
+
+  if (isMobile && !dialogOnly) {
+    return (
+      <Drawer.Root
+        open={setShowModal ? showModal : true}
+        onOpenChange={(open) => {
+          if (!open) {
+            closeModal({ dragged: true });
+          }
+        }}
+      >
+        <Drawer.Overlay className="fixed inset-0 z-[9999] bg-gray-100 bg-opacity-10 backdrop-blur" />
+        <Drawer.Portal>
+          <Drawer.Content
+            className={cn(
+              "fixed bottom-0 left-0 right-0 z-50 mt-24 rounded-t-[10px] border-t border-gray-200 bg-white",
+              className,
+            )}
+          >
+            <div className="sticky top-0 z-20 flex w-full items-center justify-center rounded-t-[10px] bg-inherit">
+              <div className="my-3 h-1 w-12 rounded-full bg-gray-300" />
+            </div>
+            {children}
+          </Drawer.Content>
+          <Drawer.Overlay />
+        </Drawer.Portal>
+      </Drawer.Root>
+    );
+  }
+  return (
+    <Dialog.Root
+      open={setShowModal ? showModal : true}
+      onOpenChange={(open) => {
+        if (!open) {
+          closeModal();
+        }
+      }}
+    >
+      <Dialog.Portal>
+        <div className="fixed inset-0 z-[9999] flex items-start justify-center sm:items-center">
+          <Dialog.Overlay
+            // for detecting when there's an active opened modal
+            id="modal-backdrop"
+            className="bg-background/80 data-[state=closed]:animate-out data-[state=closed]:fade-out data-[state=open]:fade-in fixed inset-0 z-[9999] backdrop-blur-sm transition-all duration-100"
+          />
+          <Dialog.Content
+            onOpenAutoFocus={(e) => e.preventDefault()}
+            onCloseAutoFocus={(e) => e.preventDefault()}
+            className={cn(
+              "bg-background animate-in data-[state=open]:fade-in-90 data-[state=open]:slide-in-from-bottom-10 sm:zoom-in-90 data-[state=open]:sm:slide-in-from-bottom-0 fixed z-[9999] grid w-full gap-4 rounded-b-lg border p-6 shadow-lg sm:max-w-lg sm:rounded-lg",
+              className,
+            )}
+          >
+            {children}
+          </Dialog.Content>
+        </div>
+      </Dialog.Portal>
+    </Dialog.Root>
+  );
+}

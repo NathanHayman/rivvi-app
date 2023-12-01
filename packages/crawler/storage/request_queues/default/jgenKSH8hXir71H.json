@@ -1,0 +1,9 @@
+{
+	"id": "jgenKSH8hXir71H",
+	"json": "{\"id\":\"jgenKSH8hXir71H\",\"url\":\"https://platform.openai.com/docs/quickstart/step-3-sending-your-first-api-request\",\"loadedUrl\":\"https://platform.openai.com/docs/quickstart/step-3-sending-your-first-api-request?context=python\",\"uniqueKey\":\"https://platform.openai.com/docs/quickstart/step-3-sending-your-first-api-request\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"skipNavigation\":false,\"state\":4}},\"handledAt\":\"2023-11-30T11:32:02.880Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://platform.openai.com/docs/quickstart/step-3-sending-your-first-api-request",
+	"url": "https://platform.openai.com/docs/quickstart/step-3-sending-your-first-api-request"
+}

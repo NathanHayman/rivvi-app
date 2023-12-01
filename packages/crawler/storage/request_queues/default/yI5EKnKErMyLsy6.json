@@ -1,0 +1,9 @@
+{
+	"id": "yI5EKnKErMyLsy6",
+	"json": "{\"id\":\"yI5EKnKErMyLsy6\",\"url\":\"https://platform.openai.com/docs/guides/text-generation\",\"loadedUrl\":\"https://platform.openai.com/docs/guides/text-generation\",\"uniqueKey\":\"https://platform.openai.com/docs/guides/text-generation\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"skipNavigation\":false,\"state\":4}},\"handledAt\":\"2023-11-30T11:31:42.473Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://platform.openai.com/docs/guides/text-generation",
+	"url": "https://platform.openai.com/docs/guides/text-generation"
+}

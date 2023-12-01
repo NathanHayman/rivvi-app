@@ -1,0 +1,9 @@
+{
+	"id": "cXdZrLCm1h5f6gn",
+	"json": "{\"id\":\"cXdZrLCm1h5f6gn\",\"url\":\"https://platform.openai.com/docs/guides/embeddings/frequently-asked-questions\",\"uniqueKey\":\"https://platform.openai.com/docs/guides/embeddings/frequently-asked-questions\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"skipNavigation\":false}}}",
+	"method": "GET",
+	"orderNo": 1701343905144,
+	"retryCount": 0,
+	"uniqueKey": "https://platform.openai.com/docs/guides/embeddings/frequently-asked-questions",
+	"url": "https://platform.openai.com/docs/guides/embeddings/frequently-asked-questions"
+}

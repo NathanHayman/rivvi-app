@@ -1,0 +1,9 @@
+{
+	"id": "UiSnSqnEPxrOoRS",
+	"json": "{\"id\":\"UiSnSqnEPxrOoRS\",\"url\":\"https://platform.openai.com/docs/deprecations/2023-10-06-chat-model-updates\",\"loadedUrl\":\"https://platform.openai.com/docs/deprecations/2023-10-06-chat-model-updates\",\"uniqueKey\":\"https://platform.openai.com/docs/deprecations/2023-10-06-chat-model-updates\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"skipNavigation\":false,\"state\":4}},\"handledAt\":\"2023-11-30T11:32:01.281Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://platform.openai.com/docs/deprecations/2023-10-06-chat-model-updates",
+	"url": "https://platform.openai.com/docs/deprecations/2023-10-06-chat-model-updates"
+}

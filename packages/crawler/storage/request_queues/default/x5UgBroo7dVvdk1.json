@@ -1,0 +1,9 @@
+{
+	"id": "x5UgBroo7dVvdk1",
+	"json": "{\"id\":\"x5UgBroo7dVvdk1\",\"url\":\"https://platform.openai.com/docs/assistants/how-it-works/data-access-guidance\",\"uniqueKey\":\"https://platform.openai.com/docs/assistants/how-it-works/data-access-guidance\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"skipNavigation\":false}}}",
+	"method": "GET",
+	"orderNo": 1701343907921,
+	"retryCount": 0,
+	"uniqueKey": "https://platform.openai.com/docs/assistants/how-it-works/data-access-guidance",
+	"url": "https://platform.openai.com/docs/assistants/how-it-works/data-access-guidance"
+}

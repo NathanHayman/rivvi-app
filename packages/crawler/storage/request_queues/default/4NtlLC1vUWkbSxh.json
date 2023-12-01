@@ -1,0 +1,9 @@
+{
+	"id": "4NtlLC1vUWkbSxh",
+	"json": "{\"id\":\"4NtlLC1vUWkbSxh\",\"url\":\"https://platform.openai.com/docs/assistants/overview/step-2-create-a-thread\",\"uniqueKey\":\"https://platform.openai.com/docs/assistants/overview/step-2-create-a-thread\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"skipNavigation\":false}}}",
+	"method": "GET",
+	"orderNo": 1701343907912,
+	"retryCount": 0,
+	"uniqueKey": "https://platform.openai.com/docs/assistants/overview/step-2-create-a-thread",
+	"url": "https://platform.openai.com/docs/assistants/overview/step-2-create-a-thread"
+}

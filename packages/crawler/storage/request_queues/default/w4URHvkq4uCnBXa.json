@@ -1,0 +1,9 @@
+{
+	"id": "w4URHvkq4uCnBXa",
+	"json": "{\"id\":\"w4URHvkq4uCnBXa\",\"url\":\"https://platform.openai.com/docs/guides/text-generation/token-log-probabilities\",\"loadedUrl\":\"https://platform.openai.com/docs/guides/text-generation/token-log-probabilities\",\"uniqueKey\":\"https://platform.openai.com/docs/guides/text-generation/token-log-probabilities\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"skipNavigation\":false,\"state\":4}},\"handledAt\":\"2023-11-30T11:31:53.773Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://platform.openai.com/docs/guides/text-generation/token-log-probabilities",
+	"url": "https://platform.openai.com/docs/guides/text-generation/token-log-probabilities"
+}

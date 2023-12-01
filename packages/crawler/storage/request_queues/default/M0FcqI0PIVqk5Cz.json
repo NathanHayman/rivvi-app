@@ -1,0 +1,9 @@
+{
+	"id": "M0FcqI0PIVqk5Cz",
+	"json": "{\"id\":\"M0FcqI0PIVqk5Cz\",\"url\":\"https://platform.openai.com/docs/assistants/overview\",\"loadedUrl\":\"https://platform.openai.com/docs/assistants/overview\",\"uniqueKey\":\"https://platform.openai.com/docs/assistants/overview\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"skipNavigation\":false,\"state\":4}},\"handledAt\":\"2023-11-30T11:31:47.918Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://platform.openai.com/docs/assistants/overview",
+	"url": "https://platform.openai.com/docs/assistants/overview"
+}
