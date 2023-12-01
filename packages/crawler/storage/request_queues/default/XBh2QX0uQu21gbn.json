@@ -1,9 +1,0 @@
-{
-	"id": "XBh2QX0uQu21gbn",
-	"json": "{\"id\":\"XBh2QX0uQu21gbn\",\"url\":\"https://platform.openai.com/docs/actions/what-is-a-gpt\",\"uniqueKey\":\"https://platform.openai.com/docs/actions/what-is-a-gpt\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"skipNavigation\":false}}}",
-	"method": "GET",
-	"orderNo": 1701343911203,
-	"retryCount": 0,
-	"uniqueKey": "https://platform.openai.com/docs/actions/what-is-a-gpt",
-	"url": "https://platform.openai.com/docs/actions/what-is-a-gpt"
-}

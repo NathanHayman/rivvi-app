@@ -1,11 +1,11 @@
-# `@dub/utils`
+# `@phunq/utils`
 
-`@dub/utils` is a library of utility functions that are used across Dub.co's web applications.
+`@phunq/utils` is a library of utility functions that are used across rivvi.io's web applications.
 
 ## Installation
 
 To install the package, run:
 
 ```bash
-pnpm i @dub/utils
+pnpm i @phunq/utils
 ```

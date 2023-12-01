@@ -11,7 +11,7 @@ export default function Interim() {
 	const router = useRouter();
 	return (
 		<motion.div
-			className="z-10 mx-5 my-auto flex flex-col items-center space-y-10 text-center sm:mx-auto"
+			className="shadow-primary/50 z-10 my-auto flex h-auto flex-col w-full max-w-2xl items-center justify-center rounded-md border p-3 md:p-8 text-center shadow-md backdrop-blur-lg transition-all sm:mx-auto bg-gradient-to-tr from-accent/50 to-primary-foreground/50"
 			variants={{
 				hidden: { opacity: 0, scale: 0.95 },
 				show: {
@@ -37,15 +37,13 @@ export default function Interim() {
 				</h1>
 			</motion.div>
 			<motion.p
-				className="text-foreground transition-colors sm:text-lg"
+				className="text-foreground transition-colors flex sm:text-lg mt-5 w-fit items-center justify-center pb-4 mb-2"
 				variants={STAGGER_CHILD_VARIANTS}
 			>
-				Have your own domain? Start creating for free.{" "}
-				<br className="hidden sm:block" />
-				Don't have one? Use the default{" "}
-				<p className="text-muted-foreground hover:text-foreground underline transition-colors">
+				Use the default{" "}
+				<span className=" p-1 bg-accent rounded-md mx-2 w-fit px-6 shadow-sm shadow-primary/60 text-primary font-bold font-mono hover:text-foreground transition-colors">
 					ruhe.app
-				</p>{" "}
+				</span>{" "}
 				domain to create a site.
 			</motion.p>
 			<motion.div

@@ -1,9 +1,0 @@
-{
-	"id": "OsKV9CV2VsgYG3W",
-	"json": "{\"id\":\"OsKV9CV2VsgYG3W\",\"url\":\"https://platform.openai.com/docs/quickstart/step-2-setup-your-api-key\",\"loadedUrl\":\"https://platform.openai.com/docs/quickstart/step-2-setup-your-api-key?context=python\",\"uniqueKey\":\"https://platform.openai.com/docs/quickstart/step-2-setup-your-api-key\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"skipNavigation\":false,\"state\":4}},\"handledAt\":\"2023-11-30T11:32:02.888Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://platform.openai.com/docs/quickstart/step-2-setup-your-api-key",
-	"url": "https://platform.openai.com/docs/quickstart/step-2-setup-your-api-key"
-}

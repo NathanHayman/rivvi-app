@@ -1,6 +1,6 @@
 {
-  "name": "@repo/tailwind-config",
-  "description": "Tailwindcss config for repo.co",
+  "name": "@phunq/tailwind-config",
+  "description": "Tailwindcss config for rivvi.io",
   "version": "0.0.2",
   "main": "index.ts",
   "types": "index.ts",
@@ -14,8 +14,8 @@
     "tailwindcss-radix": "^2.8.0"
   },
   "keywords": [
-    "repo",
-    "repo.co",
+    "rivvi",
+    "rivvi.io",
     "tailwind",
     "tailwindcss"
   ]

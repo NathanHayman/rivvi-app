@@ -1,9 +1,0 @@
-{
-	"id": "jivhRhW5HfzrSQC",
-	"json": "{\"id\":\"jivhRhW5HfzrSQC\",\"url\":\"https://platform.openai.com/docs/api-reference/completions\",\"loadedUrl\":\"https://platform.openai.com/docs/api-reference/completions\",\"uniqueKey\":\"https://platform.openai.com/docs/api-reference/completions\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"skipNavigation\":false,\"state\":4}},\"handledAt\":\"2023-11-30T11:31:54.256Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://platform.openai.com/docs/api-reference/completions",
-	"url": "https://platform.openai.com/docs/api-reference/completions"
-}

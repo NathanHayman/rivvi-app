@@ -1,9 +1,0 @@
-{
-	"id": "8tvvpSG1K5Ixe2T",
-	"json": "{\"id\":\"8tvvpSG1K5Ixe2T\",\"url\":\"https://platform.openai.com/docs/guides/embeddings/embedding-models\",\"uniqueKey\":\"https://platform.openai.com/docs/guides/embeddings/embedding-models\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"skipNavigation\":false}}}",
-	"method": "GET",
-	"orderNo": 1701343905141,
-	"retryCount": 0,
-	"uniqueKey": "https://platform.openai.com/docs/guides/embeddings/embedding-models",
-	"url": "https://platform.openai.com/docs/guides/embeddings/embedding-models"
-}

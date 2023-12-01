@@ -1,9 +1,0 @@
-{
-	"id": "VUeBGyog4fw18JV",
-	"json": "{\"id\":\"VUeBGyog4fw18JV\",\"url\":\"https://platform.openai.com/docs/guides/vision/what-type-of-files-can-i-upload\",\"uniqueKey\":\"https://platform.openai.com/docs/guides/vision/what-type-of-files-can-i-upload\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"skipNavigation\":false}}}",
-	"method": "GET",
-	"orderNo": 1701343906523,
-	"retryCount": 0,
-	"uniqueKey": "https://platform.openai.com/docs/guides/vision/what-type-of-files-can-i-upload",
-	"url": "https://platform.openai.com/docs/guides/vision/what-type-of-files-can-i-upload"
-}

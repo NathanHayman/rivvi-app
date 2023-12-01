@@ -1,9 +1,0 @@
-{
-	"id": "lNHxn0rQfbpTTHG",
-	"json": "{\"id\":\"lNHxn0rQfbpTTHG\",\"url\":\"https://platform.openai.com/docs/guides/legacy-fine-tuning/hyperparameters\",\"uniqueKey\":\"https://platform.openai.com/docs/guides/legacy-fine-tuning/hyperparameters\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"skipNavigation\":false}}}",
-	"method": "GET",
-	"orderNo": 1701343912878,
-	"retryCount": 0,
-	"uniqueKey": "https://platform.openai.com/docs/guides/legacy-fine-tuning/hyperparameters",
-	"url": "https://platform.openai.com/docs/guides/legacy-fine-tuning/hyperparameters"
-}

@@ -9,29 +9,24 @@ module.exports = {
     useDeploymentIdServerActions: true,
     taint: true,
   },
-  webpack: (config, { webpack, isServer }) => {
-    if (isServer) {
-      config.plugins.push(
-        // mute errors for unused typeorm deps
-        new webpack.IgnorePlugin({
-          resourceRegExp:
-            /(^@google-cloud\/spanner|^@mongodb-js\/zstd|^aws-crt|^aws4$|^pg-native$|^mongodb-client-encryption$|^@sap\/hana-client$|^snappy$|^react-native-sqlite-storage$|^bson-ext$|^cardinal$|^kerberos$|^hdb-pool$|^sql.js$|^sqlite3$|^better-sqlite3$|^ioredis$|^typeorm-aurora-data-api-driver$|^pg-query-stream$|^oracledb$|^mysql$|^snappy\/package\.json$|^cloudflare:sockets$)/,
-        }),
-        // temp fix for react-email bug: https://github.com/resendlabs/react-email/issues/868#issuecomment-1782771917
-        new NormalModuleReplacementPlugin(
-          /email\/render/,
-          path.resolve(__dirname, "./renderEmailFix.js"),
-        ),
-      );
+  webpack: (
+    config, {
+        buildId,
+        dev,
+        isServer,
+        defaultLoaders,
+        nextRuntime,
+        webpack
     }
-
-    config.module = {
-      ...config.module,
-      exprContextCritical: false,
-    };
-
-    return config;
-  },
+) => {
+    config.plugins = config.plugins || []
+    config.plugins.push(new NormalModuleReplacementPlugin(
+        /email\/render/,
+        path.resolve(__dirname, "./renderEmailFix.js"),
+    ))
+    // Important: return the modified config
+    return config
+},
   images: {
     domains: [
       "www.google.com",

@@ -1,9 +1,0 @@
-{
-	"id": "dYysS00xMLNto4n",
-	"json": "{\"id\":\"dYysS00xMLNto4n\",\"url\":\"https://platform.openai.com/docs/guides/images/working-with-typescript\",\"uniqueKey\":\"https://platform.openai.com/docs/guides/images/working-with-typescript\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"skipNavigation\":false}}}",
-	"method": "GET",
-	"orderNo": 1701343921360,
-	"retryCount": 0,
-	"uniqueKey": "https://platform.openai.com/docs/guides/images/working-with-typescript",
-	"url": "https://platform.openai.com/docs/guides/images/working-with-typescript"
-}

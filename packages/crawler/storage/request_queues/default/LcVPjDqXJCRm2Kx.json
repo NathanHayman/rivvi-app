@@ -1,9 +1,0 @@
-{
-	"id": "LcVPjDqXJCRm2Kx",
-	"json": "{\"id\":\"LcVPjDqXJCRm2Kx\",\"url\":\"https://platform.openai.com/docs/quickstart/step-1-setup-python\",\"loadedUrl\":\"https://platform.openai.com/docs/quickstart/step-1-setup-python?context=python\",\"uniqueKey\":\"https://platform.openai.com/docs/quickstart/step-1-setup-python\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"skipNavigation\":false,\"state\":4}},\"handledAt\":\"2023-11-30T11:32:02.908Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://platform.openai.com/docs/quickstart/step-1-setup-python",
-	"url": "https://platform.openai.com/docs/quickstart/step-1-setup-python"
-}

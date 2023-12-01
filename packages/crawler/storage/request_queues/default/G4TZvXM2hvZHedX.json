@@ -1,9 +1,0 @@
-{
-	"id": "G4TZvXM2hvZHedX",
-	"json": "{\"id\":\"G4TZvXM2hvZHedX\",\"url\":\"https://platform.openai.com/docs/guides/embeddings/second-generation-models\",\"uniqueKey\":\"https://platform.openai.com/docs/guides/embeddings/second-generation-models\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"skipNavigation\":false}}}",
-	"method": "GET",
-	"orderNo": 1701343905141,
-	"retryCount": 0,
-	"uniqueKey": "https://platform.openai.com/docs/guides/embeddings/second-generation-models",
-	"url": "https://platform.openai.com/docs/guides/embeddings/second-generation-models"
-}

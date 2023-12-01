@@ -1,9 +1,0 @@
-{
-	"id": "CAChTvuuhneupbB",
-	"json": "{\"id\":\"CAChTvuuhneupbB\",\"url\":\"https://platform.openai.com/docs/guides\",\"loadedUrl\":\"https://platform.openai.com/docs/guides/text-generation\",\"uniqueKey\":\"https://platform.openai.com/docs/guides\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-11-30T11:31:39.902Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://platform.openai.com/docs/guides",
-	"url": "https://platform.openai.com/docs/guides"
-}

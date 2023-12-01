@@ -1,9 +1,0 @@
-{
-	"id": "3zEAmY5xbMFr7Iv",
-	"json": "{\"id\":\"3zEAmY5xbMFr7Iv\",\"url\":\"https://platform.openai.com/docs/guides/safety-best-practices/prompt-engineering\",\"uniqueKey\":\"https://platform.openai.com/docs/guides/safety-best-practices/prompt-engineering\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"skipNavigation\":false}}}",
-	"method": "GET",
-	"orderNo": 1701343909318,
-	"retryCount": 0,
-	"uniqueKey": "https://platform.openai.com/docs/guides/safety-best-practices/prompt-engineering",
-	"url": "https://platform.openai.com/docs/guides/safety-best-practices/prompt-engineering"
-}

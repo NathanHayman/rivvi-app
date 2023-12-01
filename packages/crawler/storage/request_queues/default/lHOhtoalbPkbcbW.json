@@ -1,9 +1,0 @@
-{
-	"id": "lHOhtoalbPkbcbW",
-	"json": "{\"id\":\"lHOhtoalbPkbcbW\",\"url\":\"https://platform.openai.com/docs/guides/production-best-practices/managing-costs\",\"uniqueKey\":\"https://platform.openai.com/docs/guides/production-best-practices/managing-costs\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"skipNavigation\":false}}}",
-	"method": "GET",
-	"orderNo": 1701343909875,
-	"retryCount": 0,
-	"uniqueKey": "https://platform.openai.com/docs/guides/production-best-practices/managing-costs",
-	"url": "https://platform.openai.com/docs/guides/production-best-practices/managing-costs"
-}

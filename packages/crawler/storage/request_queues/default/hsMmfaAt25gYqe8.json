@@ -1,9 +1,0 @@
-{
-	"id": "hsMmfaAt25gYqe8",
-	"json": "{\"id\":\"hsMmfaAt25gYqe8\",\"url\":\"https://platform.openai.com/docs/api-reference/files/retrieve\",\"uniqueKey\":\"https://platform.openai.com/docs/api-reference/files/retrieve\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"skipNavigation\":false}}}",
-	"method": "GET",
-	"orderNo": 1701343912859,
-	"retryCount": 0,
-	"uniqueKey": "https://platform.openai.com/docs/api-reference/files/retrieve",
-	"url": "https://platform.openai.com/docs/api-reference/files/retrieve"
-}

@@ -1,9 +1,0 @@
-{
-	"id": "C77pqfHbo4q6Rsl",
-	"json": "{\"id\":\"C77pqfHbo4q6Rsl\",\"url\":\"https://platform.openai.com/docs/assistants/how-it-works/limitations\",\"uniqueKey\":\"https://platform.openai.com/docs/assistants/how-it-works/limitations\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"skipNavigation\":false}}}",
-	"method": "GET",
-	"orderNo": 1701343907914,
-	"retryCount": 0,
-	"uniqueKey": "https://platform.openai.com/docs/assistants/how-it-works/limitations",
-	"url": "https://platform.openai.com/docs/assistants/how-it-works/limitations"
-}

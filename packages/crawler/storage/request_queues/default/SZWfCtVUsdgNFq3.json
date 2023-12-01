@@ -1,9 +1,0 @@
-{
-	"id": "SZWfCtVUsdgNFq3",
-	"json": "{\"id\":\"SZWfCtVUsdgNFq3\",\"url\":\"https://platform.openai.com/docs/guides/vision/multiple-image-inputs\",\"uniqueKey\":\"https://platform.openai.com/docs/guides/vision/multiple-image-inputs\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"skipNavigation\":false}}}",
-	"method": "GET",
-	"orderNo": 1701343906521,
-	"retryCount": 0,
-	"uniqueKey": "https://platform.openai.com/docs/guides/vision/multiple-image-inputs",
-	"url": "https://platform.openai.com/docs/guides/vision/multiple-image-inputs"
-}

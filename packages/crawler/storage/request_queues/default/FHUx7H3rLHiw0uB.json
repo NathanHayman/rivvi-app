@@ -1,9 +1,0 @@
-{
-	"id": "FHUx7H3rLHiw0uB",
-	"json": "{\"id\":\"FHUx7H3rLHiw0uB\",\"url\":\"https://platform.openai.com/docs/api-reference/audio/createTranslation\",\"uniqueKey\":\"https://platform.openai.com/docs/api-reference/audio/createTranslation\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"skipNavigation\":false}}}",
-	"method": "GET",
-	"orderNo": 1701343912853,
-	"retryCount": 0,
-	"uniqueKey": "https://platform.openai.com/docs/api-reference/audio/createTranslation",
-	"url": "https://platform.openai.com/docs/api-reference/audio/createTranslation"
-}

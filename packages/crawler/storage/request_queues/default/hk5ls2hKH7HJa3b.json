@@ -1,9 +1,0 @@
-{
-	"id": "hk5ls2hKH7HJa3b",
-	"json": "{\"id\":\"hk5ls2hKH7HJa3b\",\"url\":\"https://platform.openai.com/docs/deprecations/first-generation-text-embedding-models\",\"uniqueKey\":\"https://platform.openai.com/docs/deprecations/first-generation-text-embedding-models\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"skipNavigation\":false}}}",
-	"method": "GET",
-	"orderNo": 1701343910833,
-	"retryCount": 0,
-	"uniqueKey": "https://platform.openai.com/docs/deprecations/first-generation-text-embedding-models",
-	"url": "https://platform.openai.com/docs/deprecations/first-generation-text-embedding-models"
-}

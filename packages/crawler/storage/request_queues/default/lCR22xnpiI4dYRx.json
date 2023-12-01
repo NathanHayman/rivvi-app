@@ -1,9 +1,0 @@
-{
-	"id": "lCR22xnpiI4dYRx",
-	"json": "{\"id\":\"lCR22xnpiI4dYRx\",\"url\":\"https://platform.openai.com/docs/guides/text-to-speech/voice-options\",\"uniqueKey\":\"https://platform.openai.com/docs/guides/text-to-speech/voice-options\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"skipNavigation\":false}}}",
-	"method": "GET",
-	"orderNo": 1701343906592,
-	"retryCount": 0,
-	"uniqueKey": "https://platform.openai.com/docs/guides/text-to-speech/voice-options",
-	"url": "https://platform.openai.com/docs/guides/text-to-speech/voice-options"
-}

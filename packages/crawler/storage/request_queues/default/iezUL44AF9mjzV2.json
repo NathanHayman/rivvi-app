@@ -1,9 +1,0 @@
-{
-	"id": "iezUL44AF9mjzV2",
-	"json": "{\"id\":\"iezUL44AF9mjzV2\",\"url\":\"https://platform.openai.com/docs/guides/vision/can-gpt-4-with-vision-understand-image-metadata\",\"uniqueKey\":\"https://platform.openai.com/docs/guides/vision/can-gpt-4-with-vision-understand-image-metadata\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"skipNavigation\":false}}}",
-	"method": "GET",
-	"orderNo": 1701343906525,
-	"retryCount": 0,
-	"uniqueKey": "https://platform.openai.com/docs/guides/vision/can-gpt-4-with-vision-understand-image-metadata",
-	"url": "https://platform.openai.com/docs/guides/vision/can-gpt-4-with-vision-understand-image-metadata"
-}

@@ -1,9 +1,0 @@
-{
-	"id": "JTfF4Mh4MGHJ3b9",
-	"json": "{\"id\":\"JTfF4Mh4MGHJ3b9\",\"url\":\"https://platform.openai.com/docs/guides/vision/can-i-fine-tune-the-image-capabilities-in-gpt-4\",\"uniqueKey\":\"https://platform.openai.com/docs/guides/vision/can-i-fine-tune-the-image-capabilities-in-gpt-4\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"skipNavigation\":false}}}",
-	"method": "GET",
-	"orderNo": 1701343906522,
-	"retryCount": 0,
-	"uniqueKey": "https://platform.openai.com/docs/guides/vision/can-i-fine-tune-the-image-capabilities-in-gpt-4",
-	"url": "https://platform.openai.com/docs/guides/vision/can-i-fine-tune-the-image-capabilities-in-gpt-4"
-}

@@ -1,9 +1,0 @@
-{
-	"id": "1lzrlTYrFjsiJgH",
-	"json": "{\"id\":\"1lzrlTYrFjsiJgH\",\"url\":\"https://platform.openai.com/docs/guides/production-best-practices/safety-best-practices\",\"uniqueKey\":\"https://platform.openai.com/docs/guides/production-best-practices/safety-best-practices\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"skipNavigation\":false}}}",
-	"method": "GET",
-	"orderNo": 1701343910015,
-	"retryCount": 0,
-	"uniqueKey": "https://platform.openai.com/docs/guides/production-best-practices/safety-best-practices",
-	"url": "https://platform.openai.com/docs/guides/production-best-practices/safety-best-practices"
-}

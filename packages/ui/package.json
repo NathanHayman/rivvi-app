@@ -1,6 +1,6 @@
 {
   "name": "@phunq/ui",
-  "description": "UI components for repo.io",
+  "description": "UI components for rivvi.io",
   "version": "0.6.0",
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@phunq/utils": "workspace:*",
-    "@repo/tailwind-config": "workspace:*",
+    "@phunq/tailwind-config": "workspace:*",
     "@types/react": "^18.2.5",
     "autoprefixer": "^10.4.16",
     "next": "13.5.4",
@@ -65,14 +65,14 @@
     "vaul": "^0.6.8"
   },
   "author": "Nathan Hayman <nathan@ruhe.digital>",
-  "homepage": "https://repo.io",
+  "homepage": "https://rivvi.io",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nathanhayman/repo-io.git"
+    "url": "git+https://github.com/nathanhayman/rivvi-io.git"
   },
   "keywords": [
-    "repo",
-    "repo.io",
+    "rivvi",
+    "rivvi.io",
     "ui"
   ],
   "publishConfig": {

@@ -1,9 +1,0 @@
-{
-	"id": "gxX0lYDrStYPjFZ",
-	"json": "{\"id\":\"gxX0lYDrStYPjFZ\",\"url\":\"https://platform.openai.com/docs/guides/production-best-practices/security-and-compliance\",\"uniqueKey\":\"https://platform.openai.com/docs/guides/production-best-practices/security-and-compliance\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"skipNavigation\":false}}}",
-	"method": "GET",
-	"orderNo": 1701343909988,
-	"retryCount": 0,
-	"uniqueKey": "https://platform.openai.com/docs/guides/production-best-practices/security-and-compliance",
-	"url": "https://platform.openai.com/docs/guides/production-best-practices/security-and-compliance"
-}
